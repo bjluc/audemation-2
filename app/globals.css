@@ -153,7 +153,8 @@
     -moz-osx-font-smoothing: grayscale;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading text-fg tracking-tight;
+    @apply font-heading tracking-tight;
+    color: inherit;
   }
   ::selection {
     background-color: #c7d2fe;
