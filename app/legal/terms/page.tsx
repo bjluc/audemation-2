@@ -1,18 +1,21 @@
-import type { Metadata } from "next"
+import { ComingSoon, comingSoonMetadata } from "@/components/layout/coming-soon";
 
-export const metadata: Metadata = {
-  title: "Terms of service",
-  description:
-    "The terms that cover how audemation delivers websites and automations for UK small businesses.",
-}
+export const metadata = comingSoonMetadata(
+  "Terms of service",
+  "Plain-English terms covering the free mockup, paid website work, and monthly automations."
+);
 
 export default function TermsPage() {
   return (
-    <main className="mx-auto max-w-[1200px] px-4 py-12">
-      <h1 className="text-3xl font-semibold text-ink mt-12">
-        Terms of service
-      </h1>
-      <p className="text-muted mt-4">Content coming in Phase 1.</p>
-    </main>
-  )
+    <ComingSoon
+      title="Terms of service"
+      description="Plain-English terms covering the free mockup, paid website work, and monthly automations."
+      teasers={[
+        "The free mockup: what you can do with it, and what you can't",
+        "Paid website work: 50% deposit, 50% on delivery, 7-day terms",
+        "Monthly automations: scope, billing, cancellation",
+        "First-client special: 20% off in exchange for a testimonial",
+      ]}
+    />
+  );
 }

@@ -1,16 +1,21 @@
-import type { Metadata } from "next"
+import { ComingSoon, comingSoonMetadata } from "@/components/layout/coming-soon";
 
-export const metadata: Metadata = {
-  title: "Mockups",
-  description:
-    "Before-and-after examples of websites I've rebuilt — real businesses, real results. See what a modern site actually looks like.",
-}
+export const metadata = comingSoonMetadata(
+  "Mockups",
+  "A gallery of real before-and-after mockups. Featured entry: the previous version of this very site."
+);
 
 export default function MockupsPage() {
   return (
-    <main className="mx-auto max-w-[1200px] px-4 py-12">
-      <h1 className="text-3xl font-semibold text-ink mt-12">Mockups</h1>
-      <p className="text-muted mt-4">Content coming in Phase 1.</p>
-    </main>
-  )
+    <ComingSoon
+      title="Mockups"
+      description="A gallery of real before-and-after mockups. Featured entry: the previous version of this very site."
+      teasers={[
+        "Featured entry: the previous audemation.com, with screenshot and live link",
+        "3–6 anonymised before-and-after mockups from real prospect sites",
+        "One-line 'what changed' for each — plain English, not marketing fluff",
+        "Click into a detail view for the full before/after pair",
+      ]}
+    />
+  );
 }

@@ -1,16 +1,21 @@
-import type { Metadata } from "next"
+import { ComingSoon, comingSoonMetadata } from "@/components/layout/coming-soon";
 
-export const metadata: Metadata = {
-  title: "About",
-  description:
-    "Twenty-plus years running businesses, full-stack engineer, London-based. I work solo — no agency overhead, no account managers, no handoffs.",
-}
+export const metadata = comingSoonMetadata(
+  "About",
+  "Twenty-plus years running real businesses, full-stack engineer who's shipped three production systems, and a chef on the side. Plain English, no agency."
+);
 
 export default function AboutPage() {
   return (
-    <main className="mx-auto max-w-[1200px] px-4 py-12">
-      <h1 className="text-3xl font-semibold text-ink mt-12">About</h1>
-      <p className="text-muted mt-4">Content coming in Phase 1.</p>
-    </main>
-  )
+    <ComingSoon
+      title="About"
+      description="Twenty-plus years running real businesses, full-stack engineer who's shipped three production systems, and a chef on the side. Plain English, no agency."
+      teasers={[
+        "The story: 20+ years running businesses, full-stack engineer, AI depth",
+        "Tech stack as a credibility signal — what I actually use day-to-day",
+        "Personal: chef background, Topstay.uk, London-based",
+        "Why I work solo, and what that means for you",
+      ]}
+    />
+  );
 }

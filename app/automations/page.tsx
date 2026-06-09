@@ -1,16 +1,22 @@
-import type { Metadata } from "next"
+import { ComingSoon, comingSoonMetadata } from "@/components/layout/coming-soon";
 
-export const metadata: Metadata = {
-  title: "Automations",
-  description:
-    "Once your site is live, here is what we can add on: AI enquiry handling, lead tracking, review requests, and more — built around how your business actually works.",
-}
+export const metadata = comingSoonMetadata(
+  "Automations",
+  "Once your site is live, here's what we can bolt on. These run while you sleep — and they pay for the site within a few months."
+);
 
 export default function AutomationsPage() {
   return (
-    <main className="mx-auto max-w-[1200px] px-4 py-12">
-      <h1 className="text-3xl font-semibold text-ink mt-12">Automations</h1>
-      <p className="text-muted mt-4">Content coming in Phase 1.</p>
-    </main>
-  )
+    <ComingSoon
+      title="Automations"
+      description="Once your site is live, here's what we can bolt on. These run while you sleep — and they pay for the site within a few months."
+      teasers={[
+        "AI enquiry handler — replies to common questions 24/7",
+        "Lead → CRM pipeline — every form submission lands ready",
+        "Booking capture — straight from your site to your calendar",
+        "Review request sequence — asks happy customers on a delay",
+        "More as we discover what fits your specific workflow",
+      ]}
+    />
+  );
 }

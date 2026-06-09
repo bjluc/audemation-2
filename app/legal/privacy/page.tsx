@@ -1,15 +1,21 @@
-import type { Metadata } from "next"
+import { ComingSoon, comingSoonMetadata } from "@/components/layout/coming-soon";
 
-export const metadata: Metadata = {
-  title: "Privacy policy",
-  description: "How audemation collects, uses, and protects your data.",
-}
+export const metadata = comingSoonMetadata(
+  "Privacy policy",
+  "How audemation handles your data. Short, plain English, no dark patterns."
+);
 
 export default function PrivacyPage() {
   return (
-    <main className="mx-auto max-w-[1200px] px-4 py-12">
-      <h1 className="text-3xl font-semibold text-ink mt-12">Privacy policy</h1>
-      <p className="text-muted mt-4">Content coming in Phase 1.</p>
-    </main>
-  )
+    <ComingSoon
+      title="Privacy policy"
+      description="How audemation handles your data. Short, plain English, no dark patterns."
+      teasers={[
+        "What data we collect and why (just what's needed)",
+        "How long we keep it (and how to ask us to delete it)",
+        "Cookies and analytics (Plausible — privacy-first, no fingerprinting)",
+        "Your rights under UK GDPR",
+      ]}
+    />
+  );
 }

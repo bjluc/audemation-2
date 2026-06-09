@@ -1,11 +1,14 @@
-"use client"
+"use client";
 
-import Link from "next/link"
+import Link from "next/link";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 import {
-  NavigationMenu,
-  NavigationMenuList,
-  NavigationMenuItem,
-} from "@/components/ui/navigation-menu"
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetClose,
+} from "@/components/ui/sheet";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -13,53 +16,98 @@ const navLinks = [
   { href: "/mockups", label: "Mockups" },
   { href: "/automations", label: "Automations" },
   { href: "/about", label: "About" },
-]
+];
 
 export function Header() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-line shadow-soft">
-      <div className="mx-auto max-w-[1200px] px-4 flex items-center h-16 gap-8">
+    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-line">
+      <div className="container-x flex items-center h-16 gap-8">
         {/* Logo */}
         <Link
           href="/"
-          className="font-semibold text-ink text-lg tracking-tight shrink-0"
+          className="flex items-center gap-1.5 shrink-0 group"
+          aria-label="audemation — home"
         >
-          audemation
+          <span className="inline-block w-2 h-2 rounded-full bg-brand group-hover:scale-110 transition-transform" />
+          <span className="font-bold text-fg text-lg tracking-tight">
+            audemation
+          </span>
         </Link>
 
         {/* Desktop nav */}
-        <NavigationMenu className="hidden md:flex">
-          <NavigationMenuList className="gap-0">
-            {navLinks.map((link) => (
-              <NavigationMenuItem key={link.href}>
-                <Link
-                  href={link.href}
-                  className="inline-flex h-9 items-center px-3 text-sm font-medium text-ink hover:text-accent transition-colors rounded-lg"
-                >
-                  {link.label}
-                </Link>
-              </NavigationMenuItem>
-            ))}
-          </NavigationMenuList>
-        </NavigationMenu>
+        <nav className="hidden md:flex items-center gap-1" aria-label="Primary">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="relative inline-flex h-9 items-center px-3 text-sm font-medium text-fg-muted hover:text-fg transition-colors group"
+            >
+              {link.label}
+              <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-brand scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+            </Link>
+          ))}
+        </nav>
 
-        {/* Right side */}
-        <div className="ml-auto flex items-center gap-3">
-          <Link
-            href="/contact"
-            className="hidden md:inline-flex items-center h-9 px-4 rounded-lg bg-accent text-white text-sm font-medium hover:bg-accent-hover transition-colors"
-          >
+        {/* Right side: CTA + mobile trigger */}
+        <div className="ml-auto flex items-center gap-2">
+          <Link href="/contact" className="btn-brand hidden md:inline-flex h-10 px-5 text-sm">
             Get a free mockup
           </Link>
-          {/* Mobile: stub — wired in Phase 1 */}
-          <button
-            type="button"
-            className="md:hidden px-3 py-1.5 text-sm border border-line rounded-lg text-ink"
-          >
-            Menu
-          </button>
+
+          {/* Mobile menu */}
+          <Sheet open={open} onOpenChange={setOpen}>
+            <SheetTrigger
+              className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-line text-fg hover:bg-bg-alt transition-colors"
+              aria-label="Open menu"
+            >
+              <Menu className="w-5 h-5" />
+            </SheetTrigger>
+            <SheetContent
+              side="right"
+              className="w-[300px] sm:w-[340px] p-0 bg-white"
+              showCloseButton={false}
+            >
+              <div className="flex items-center justify-between p-5 border-b border-line">
+                <Link
+                  href="/"
+                  onClick={() => setOpen(false)}
+                  className="flex items-center gap-1.5"
+                >
+                  <span className="inline-block w-2 h-2 rounded-full bg-brand" />
+                  <span className="font-bold text-fg text-lg">audemation</span>
+                </Link>
+                <SheetClose
+                  className="inline-flex items-center justify-center w-9 h-9 rounded-lg text-fg-muted hover:bg-bg-alt transition-colors"
+                  aria-label="Close menu"
+                >
+                  <X className="w-5 h-5" />
+                </SheetClose>
+              </div>
+              <nav className="flex flex-col p-3" aria-label="Mobile">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setOpen(false)}
+                    className="flex items-center h-12 px-3 rounded-lg text-base font-medium text-fg hover:bg-bg-alt hover:text-brand transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+                <Link
+                  href="/contact"
+                  onClick={() => setOpen(false)}
+                  className="btn-brand mt-4 h-12"
+                >
+                  Get a free mockup
+                </Link>
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
-  )
+  );
 }

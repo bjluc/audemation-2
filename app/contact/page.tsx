@@ -1,18 +1,21 @@
-import type { Metadata } from "next"
+import { ComingSoon, comingSoonMetadata } from "@/components/layout/coming-soon";
 
-export const metadata: Metadata = {
-  title: "Get a free mockup",
-  description:
-    "Tell me about your business and your current website. I will build you a free modern sample within a couple of days — no commitment, no catch.",
-}
+export const metadata = comingSoonMetadata(
+  "Get a free mockup",
+  "Send me your business name, current website, and a short note. I come back with a free mockup in 2–3 days. Email only — no phone, I'm solo."
+);
 
 export default function ContactPage() {
   return (
-    <main className="mx-auto max-w-[1200px] px-4 py-12">
-      <h1 className="text-3xl font-semibold text-ink mt-12">
-        Get a free mockup
-      </h1>
-      <p className="text-muted mt-4">Content coming in Phase 1.</p>
-    </main>
-  )
+    <ComingSoon
+      title="Get a free mockup"
+      description="Send me your business name, current website, and a short note. I come back with a free mockup in 2–3 days. Email only — no phone, I'm solo."
+      teasers={[
+        "Form: business name, current website URL, contact email, brief description",
+        "What happens next: a 2–3 day turnaround on your mockup",
+        "Email-only contact (no phone) — solo founder, protect the time",
+        "Form backend wired up in Phase 2 (currently placeholder)",
+      ]}
+    />
+  );
 }

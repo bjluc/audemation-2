@@ -1,16 +1,21 @@
-import type { Metadata } from "next"
+import { ComingSoon, comingSoonMetadata } from "@/components/layout/coming-soon";
 
-export const metadata: Metadata = {
-  title: "How it works",
-  description:
-    "A plain-English explanation of the six-step process: from spotting a tired website to delivering the finished site and the automations that keep it working.",
-}
+export const metadata = comingSoonMetadata(
+  "How it works",
+  "The full six-step system — from spotting a tired site to delivering the real thing. Plain English, no agency overhead."
+);
 
 export default function HowItWorksPage() {
   return (
-    <main className="mx-auto max-w-[1200px] px-4 py-12">
-      <h1 className="text-3xl font-semibold text-ink mt-12">How it works</h1>
-      <p className="text-muted mt-4">Content coming in Phase 1.</p>
-    </main>
-  )
+    <ComingSoon
+      title="How it works"
+      description="The full six-step system — from spotting a tired site to delivering the real thing. Plain English, no agency overhead."
+      teasers={[
+        "The 6-step system in detail, with realistic timeframes",
+        "What you get: a clean modern site, plus optional automations",
+        "What you don't get: agency fees, retainers, or jargon",
+        "A 5–6 question FAQ covering the awkward edge cases",
+      ]}
+    />
+  );
 }
