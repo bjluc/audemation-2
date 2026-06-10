@@ -23,7 +23,7 @@ const galleryCards: GalleryCard[] = [
     caption:
       "Replaced stock photos with real job-site photographs; cut the enquiry form from seven fields to three.",
     whatChanged:
-      "The original site relied on generic construction stock photos that looked nothing like the actual work on offer. Swapping them for real on-site photographs — even imperfect phone shots — immediately grounded the business and gave visitors something concrete to judge. The enquiry form had accumulated seven fields over the years: full name, company, address, two phone numbers, project type, and a budget range. Cutting it to name, email, and a short description removed the main reason people were abandoning it halfway through.",
+      "The original site relied on generic construction stock photos that looked nothing like the actual work on offer. Swapping them for real on-site photographs (even imperfect phone shots) immediately grounded the business and gave visitors something concrete to judge. The enquiry form had accumulated seven fields over the years: full name, company, address, two phone numbers, project type, and a budget range. Cutting it to name, email, and a short description removed the main reason people were abandoning it halfway through.",
   },
   {
     id: "cafe",
@@ -31,7 +31,7 @@ const galleryCards: GalleryCard[] = [
     caption:
       "Added a live menu in place of a downloadable PDF; moved the address and opening hours above the fold.",
     whatChanged:
-      "The menu was buried two clicks deep as a PDF last updated in 2021 — invisible to anyone on a phone, and impossible to update without a designer. Replacing it with a simple scrollable page means it works on any device and can be changed in under a minute. The address and opening hours — the two things most café visitors actually need — were hidden in the footer. Moving them above the fold saved first-time visitors from hunting around the page.",
+      "The menu was buried two clicks deep as a PDF last updated in 2021, invisible to anyone on a phone and impossible to update without a designer. Replacing it with a simple scrollable page means it works on any device and can be changed in under a minute. The address and opening hours (the two things most café visitors actually need) were hidden in the footer. Moving them above the fold saved first-time visitors from hunting around the page.",
   },
   {
     id: "chiropractor",
@@ -39,7 +39,7 @@ const galleryCards: GalleryCard[] = [
     caption:
       "Rebuilt the booking flow as a single-page form; removed an animated banner that was breaking on mobile.",
     whatChanged:
-      "Booking an appointment required clicking through to a third-party site that opened in a new tab, with a different visual style and no clear confirmation step. Bringing the booking form directly onto the main site — three fields, one submit button — removed the point of confusion where most visitors were dropping off. An animated banner from an earlier era of the web was causing layout breakages on modern mobile browsers; removing it alone improved the mobile experience noticeably.",
+      "Booking an appointment required clicking through to a third-party site that opened in a new tab, with a different visual style and no clear confirmation step. Bringing the booking form directly onto the main site (three fields, one submit button) removed the point of confusion where most visitors were dropping off. An animated banner from an earlier era of the web was causing layout breakages on modern mobile browsers; removing it alone improved the mobile experience noticeably.",
   },
   {
     id: "accountant",
@@ -47,7 +47,7 @@ const galleryCards: GalleryCard[] = [
     caption:
       "Added a plain-English pricing page; rewrote the services section so a non-accountant can follow it.",
     whatChanged:
-      "The services page described what the firm did in precise accounting terminology — correct, but opaque to a small business owner who just needs to know whether their annual accounts are covered. Rewriting it in plain English, with a concrete list of what each package includes, made the decision much simpler. Adding a pricing page — even a transparent starting-from figure — removed the single most common enquiry, which was almost always asking about rates.",
+      "The services page described what the firm did in precise accounting terminology. Correct, but opaque to a small business owner who just needs to know whether their annual accounts are covered. Rewriting it in plain English, with a concrete list of what each package includes, made the decision much simpler. Adding a pricing page (even a transparent starting-from figure) removed the single most common enquiry, which was almost always asking about rates.",
   },
   {
     id: "bnb",
@@ -55,7 +55,7 @@ const galleryCards: GalleryCard[] = [
     caption:
       "Added a direct booking button above the fold; replaced broken gallery thumbnails with full-width room photographs.",
     whatChanged:
-      "The only booking option was a link to a major OTA, which meant the B&B was paying commission on every room night they could have taken direct. Adding a clearly labelled 'Book direct' button — visible in the hero before any scrolling — gave guests the option before they clicked away. A gallery of twelve tiny thumbnails, several of which were returning broken image errors, was replaced with five full-width photographs that actually showed the rooms and the seafront view.",
+      "The only booking option was a link to a major OTA, which meant the B&B was paying commission on every room night they could have taken direct. Adding a clearly labelled 'Book direct' button (visible in the hero before any scrolling) gave guests the option before they clicked away. A gallery of twelve tiny thumbnails, several of which were returning broken image errors, was replaced with five full-width photographs that actually showed the rooms and the seafront view.",
   },
 ];
 
@@ -101,7 +101,7 @@ export default function MockupsPage() {
                 {/* Image side */}
                 <div className="aspect-[4/3] md:aspect-auto md:min-h-[420px] bg-gradient-to-br from-brand-soft to-warm-soft flex flex-col items-center justify-center gap-2">
                   <span className="text-sm font-semibold text-fg-muted">
-                    Screenshot — before
+                    Screenshot: before
                   </span>
                   <span className="text-xs text-fg-muted/60">
                     Previous version
@@ -111,7 +111,7 @@ export default function MockupsPage() {
                 {/* Text side */}
                 <div className="p-8 md:p-10 lg:p-12 flex flex-col justify-center">
                   <h2 className="text-2xl md:text-3xl font-bold text-fg text-balance">
-                    audemation.com — the rebuild of this site
+                    audemation.com: the rebuild of this site
                   </h2>
                   <p className="mt-3 text-fg-muted leading-relaxed">
                     The first entry in the gallery is the previous version of
@@ -124,7 +124,7 @@ export default function MockupsPage() {
                       Typography was loose, with too many font weights and
                       inconsistent spacing throughout. The hero said
                       &ldquo;free website mockup&rdquo; but buried the offer in
-                      the fourth paragraph — visitors without context had no
+                      the fourth paragraph, so visitors without context had no
                       clear reason to stay.
                     </p>
                     <p>
@@ -144,7 +144,7 @@ export default function MockupsPage() {
                   </div>
 
                   <div className="mt-8">
-                    {/* TODO: update with the actual old Vercel URL — Bernard will swap this after Wave A */}
+                    {/* TODO: update with the actual old Vercel URL. Bernard will swap this after Wave A */}
                     <Link
                       href="https://audemation-old.vercel.app"
                       target="_blank"

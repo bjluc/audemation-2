@@ -16,7 +16,7 @@ import { FadeIn, FadeInStagger, FadeInItem } from "@/components/motion/fade-in";
 export const metadata: Metadata = {
   title: "How it works",
   description:
-    "The full six-step system — from spotting a tired site to delivering the real thing. Plain English, no agency overhead.",
+    "The full six-step system: from spotting a tired site to delivering the real thing. Plain English, no agency overhead.",
 };
 
 const steps = [
@@ -24,13 +24,13 @@ const steps = [
     icon: Search,
     title: "Spot",
     blurb:
-      "I keep a running list of outdated sites across a range of UK industries and locations. If yours is on it, you'll hear from me — no cold-call scripts, just a straight note.",
+      "I keep a running list of outdated sites across a range of UK industries and locations. If yours is on it, you'll hear from me. A short note, nothing scripted.",
   },
   {
     icon: Pencil,
     title: "Mock",
     blurb:
-      "Each week I pick one or two promising businesses and build a free modern sample. Your real content, your colours, your logo — not a template filled with placeholder text.",
+      "Each week I pick one or two promising businesses and build a free modern sample. Your real content, your colours, your logo. No template filled with placeholder text.",
   },
   {
     icon: Send,
@@ -42,7 +42,7 @@ const steps = [
     icon: Wrench,
     title: "Deliver",
     blurb:
-      "If you say yes, I build the real thing — production-quality, clean code, yours to host wherever you like. Most sites go live within two to three weeks of a green light.",
+      "If you say yes, I build the real thing: production-quality, clean code, yours to host wherever you like. Most sites go live within two to three weeks of a green light.",
   },
   {
     icon: Sparkles,
@@ -54,12 +54,12 @@ const steps = [
     icon: TrendingUp,
     title: "Watch",
     blurb:
-      "The first paid client tells me which niche to go deeper in. The second confirms it. That focus keeps quality up and costs down — for both of us.",
+      "The first paid client tells me which niche to go deeper in. The second confirms it. That focus keeps quality up and costs down, for both of us.",
   },
 ];
 
 const gets = [
-  "A production-ready website built on clean code — fast, mobile-first, and hosted on your own account.",
+  "A production-ready website built on clean code: fast, mobile-first, and hosted on your own account.",
   "Automations built around how your business actually works: enquiry handling, booking capture, review requests, or something else entirely.",
   "The full source code and all assets. Yours to keep once the project is paid in full.",
   "Plain-English communication throughout. No jargon, no hidden charges, no terms designed to confuse.",
@@ -69,13 +69,13 @@ const doesntGet = [
   "No monthly retainers. One project, one price, agreed up front.",
   "No agency lock-in. You own the code and can take it to any developer.",
   "No upsell pressure on the day you receive the mockup.",
-  "No bloated process — no discovery workshops, no 30-page proposals.",
+  "No bloated process. No discovery workshops, no 30-page proposals.",
 ];
 
 const faqs = [
   {
     q: "How long does the free mockup take?",
-    a: "Most mockups are ready within two to three working days of me picking your business. You get a link to a live preview — no waiting for a PDF attachment.",
+    a: "Most mockups are ready within two to three working days of me picking your business. You get a link to a live preview, with no wait for a PDF attachment.",
   },
   {
     q: "What do I get to keep if I say no?",
@@ -87,11 +87,11 @@ const faqs = [
   },
   {
     q: "What happens if I ignore the message about my mockup?",
-    a: "Nothing. I won't chase you, and there's no follow-up email sequence. If you change your mind later, you can always get in touch — the offer stands.",
+    a: "Nothing. I won't chase you, and there's no follow-up email sequence. If you change your mind later, you can always get in touch. The offer stands.",
   },
   {
     q: "Who owns the code, and who handles hosting?",
-    a: "You own the code outright once the project is paid in full. Hosting is your choice — I'll recommend a provider that fits your budget and traffic, and help you set it up, but your site sits on your account, not mine.",
+    a: "You own the code outright once the project is paid in full. Hosting is your choice. I'll recommend a provider that fits your budget and traffic, and help you set it up, but your site sits on your account, not mine.",
   },
   {
     q: "How many revisions are included?",
@@ -122,15 +122,13 @@ export default function HowItWorksPage() {
           <FadeIn className="max-w-3xl">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-line text-sm font-medium text-fg-muted shadow-soft">
               <span className="w-1.5 h-1.5 rounded-full bg-brand" />
-              Six steps. Weeks, not months.
+              Six steps. Most projects wrap in weeks, not months.
             </span>
             <h1 className="mt-6 text-4xl md:text-6xl lg:text-7xl font-bold text-fg leading-[1.05] tracking-tight text-balance">
               How this works.
             </h1>
             <p className="mt-6 text-lg md:text-xl text-fg-muted max-w-2xl leading-relaxed text-pretty">
-              From spotting a tired site to handing over a working product —
-              the full system, explained plainly. No agency process, no
-              inflated timelines.
+              From spotting a tired site to handing over a working product: the full system, explained plainly. No agency process, no inflated timelines.
             </p>
           </FadeIn>
         </div>
@@ -182,7 +180,7 @@ export default function HowItWorksPage() {
         <div className="container-x">
           <FadeIn className="max-w-2xl">
             <h2 className="text-3xl md:text-5xl font-bold text-fg tracking-tight text-balance">
-              What&apos;s included — and what isn&apos;t.
+              What&apos;s included, and what isn&apos;t.
             </h2>
             <p className="mt-4 text-lg text-fg-muted text-pretty">
               The straight answers to questions most agencies bury in their

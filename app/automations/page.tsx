@@ -14,7 +14,7 @@ import { FadeIn, FadeInStagger, FadeInItem } from "@/components/motion/fade-in";
 export const metadata: Metadata = {
   title: "Automations",
   description:
-    "Once your site is live, here's what we can bolt on — AI enquiry handling, CRM pipelines, booking capture, review requests, and quote follow-ups.",
+    "Once your site is live, here's what we can bolt on: AI enquiry handling, CRM pipelines, booking capture, review requests, and quote follow-ups.",
 };
 
 const automations = [
@@ -24,16 +24,16 @@ const automations = [
     problem:
       "You can't be at your desk at 10pm when someone visits your site and has a question.",
     howItWorks:
-      "A trained assistant answers the questions your customers ask most — opening times, what you offer, how to book. It's connected to your site and replies in seconds. You get a daily summary of every conversation, so nothing slips through.",
+      "A trained assistant answers the questions your customers ask most: opening times, what you offer, how to book. It's connected to your site and replies in seconds. You get a daily summary of every conversation, so nothing slips through.",
     price: "From £200/mo",
   },
   {
     icon: Bot,
     title: "Lead → CRM pipeline",
     problem:
-      "Contact form submissions sit in your inbox until you get round to them — then half get forgotten.",
+      "Contact form submissions sit in your inbox until you get round to them. Then half get forgotten.",
     howItWorks:
-      "Every form submission is automatically sent to your CRM (HubSpot, Pipedrive, Notion — whichever you use), tagged by source, and flagged for follow-up. No copy-pasting, no missed leads.",
+      "Every form submission is automatically sent to your CRM (HubSpot, Pipedrive, Notion, or whichever you use), tagged by source, and flagged for follow-up. No copy-pasting, no missed leads.",
     price: "From £200/mo",
   },
   {
@@ -51,16 +51,16 @@ const automations = [
     problem:
       "Happy customers mean to leave you a review but never quite get round to it.",
     howItWorks:
-      "A day or two after a job is marked complete, the customer gets a short, friendly message with a direct link to your Google Business profile. The timing and wording can be adjusted — no spam, just a well-placed nudge.",
+      "A day or two after a job is marked complete, the customer gets a short, friendly message with a direct link to your Google Business profile. The timing and wording can be adjusted. One short message at the right moment.",
     price: "From £200/mo",
   },
   {
     icon: Mail,
     title: "Quote follow-ups",
     problem:
-      "You send a quote and then wait — with no idea if they've read it or just gone quiet.",
+      "You send a quote and then wait, with no idea if they've read it or just gone quiet.",
     howItWorks:
-      "When a quote goes unanswered, the system sends a short, polite follow-up at 3, 7, and 14 days. Each message is to the point and easy to reply to. Once the client responds — or books — the sequence stops automatically.",
+      "When a quote goes unanswered, the system sends a short, polite follow-up at 3, 7, and 14 days. Each message is to the point and easy to reply to. Once the client responds (or books), the sequence stops automatically.",
     price: "From £200/mo",
   },
 ];
@@ -69,7 +69,7 @@ const benefits = [
   "Replies within seconds, not hours",
   "No more missed enquiries at 11pm",
   "Plays nicely with tools you already use (Google Calendar, HubSpot, Xero, Mailchimp, and more)",
-  "You get a weekly summary of what happened — no dashboards to learn",
+  "You get a weekly summary of what happened. No dashboards to learn.",
 ];
 
 export default function AutomationsPage() {
@@ -177,7 +177,7 @@ export default function AutomationsPage() {
           <FadeIn delay={0.1} className="mt-8">
             <p className="text-sm text-fg-muted">
               Need all five? Add them as a bundle for{" "}
-              <span className="font-semibold text-fg">£400/mo</span> — same
+              <span className="font-semibold text-fg">£400/mo</span>, the same
               price as two individually.
             </p>
           </FadeIn>
@@ -227,7 +227,7 @@ export default function AutomationsPage() {
             </h2>
             <p className="mt-5 text-lg text-fg-muted-on-dark text-pretty">
               Every business is different. Tell me what&apos;s taking up your
-              time and I&apos;ll tell you whether an automation can help — and
+              time and I&apos;ll tell you whether an automation can help, and
               what it would cost.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">

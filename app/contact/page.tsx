@@ -37,11 +37,11 @@ const steps = [
   {
     step: "02",
     title: "I build a free mockup",
-    blurb: "Within 2–3 working days you get a real, modern sample of your site — built in your brand, with your content.",
+    blurb: "Within 2–3 working days you get a real, modern sample of your site, built in your brand, with your content.",
   },
   {
     step: "03",
-    title: "We talk — or you keep it",
+    title: "We talk, or you keep it",
     blurb: "If you'd like to take it further, we talk. If not, you keep the mockup anyway. No hard sell.",
   },
 ];
@@ -110,7 +110,7 @@ export default function ContactPage() {
             </h1>
             <p className="mt-6 text-lg md:text-xl text-fg-muted max-w-2xl leading-relaxed text-pretty">
               Fill in the form below and I&apos;ll come back within 2–3 working
-              days with a free, modern mockup of your site — no obligation, no
+              days with a free, modern mockup of your site. No obligation, no
               pitch.
             </p>
           </FadeIn>
@@ -129,7 +129,7 @@ export default function ContactPage() {
                     strokeWidth={1.5}
                   />
                   <h2 className="text-2xl font-bold text-fg">
-                    Thanks — message sent.
+                    Thanks. Message sent.
                   </h2>
                   <p className="mt-4 text-fg-muted text-pretty max-w-sm mx-auto leading-relaxed">
                     I&apos;ll be in touch within 1 working day, usually faster.
@@ -366,7 +366,7 @@ export default function ContactPage() {
                   There&apos;s no phone number on this site.
                 </p>
                 <p className="text-sm text-fg-muted leading-relaxed">
-                  I&apos;m a solo founder — email is the only way I can keep up
+                  I&apos;m a solo founder. Email is the only way I can keep up
                   properly and give every enquiry the attention it deserves. I
                   reply to every message myself.
                 </p>

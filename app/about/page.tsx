@@ -4,9 +4,9 @@ import { ArrowRight } from "lucide-react";
 import { FadeIn, FadeInStagger, FadeInItem } from "@/components/motion/fade-in";
 
 export const metadata: Metadata = {
-  title: "About — audemation",
+  title: "About · audemation",
   description:
-    "Twenty years running real businesses. Three production systems shipped. London-based, solo, plain English — no agency.",
+    "Twenty years running real businesses. Three production systems shipped. London-based, solo, plain English. No agency overhead.",
 };
 
 const stack = [
@@ -40,7 +40,7 @@ const stack = [
   },
   {
     name: "pgvector",
-    description: "PostgreSQL extension for vector search — the backbone of RAG pipelines",
+    description: "PostgreSQL extension for vector search: the backbone of RAG pipelines",
   },
 ];
 
@@ -105,34 +105,33 @@ export default function AboutPage() {
               <p className="text-lg text-fg-muted leading-relaxed text-pretty">
                 I spent over twenty years running my own businesses before I wrote a line of
                 production code. That included a serviced accommodation operation and hospitality
-                work in North London — managing bookings, suppliers, maintenance schedules, and
-                the steady stream of small crises that come with any property-based business. I
-                know what it means to need a tool that actually works, not one that looks good in
-                a demo.
+                work in North London, managing bookings, suppliers, and maintenance schedules. The
+                small crises that come with running a property-based business: a burst pipe at
+                11pm, a guest who can&apos;t find the key safe, a cleaner who cancels at short notice.
               </p>
             </FadeIn>
             <FadeIn delay={0.1}>
               <p className="text-lg text-fg-muted leading-relaxed text-pretty">
-                I&apos;m a full-stack engineer. I&apos;ve shipped three real production systems —
-                not portfolio projects or tutorials I followed on YouTube. A booking and management
-                platform for my own accommodation business. An AI document-ingestion pipeline for
-                a legal workflow. A multi-channel chatbot that runs on real customer enquiries.
-                They handle real users. They&apos;re still running.
+                I&apos;m a full-stack engineer. I&apos;ve shipped three real production systems. A
+                booking and management platform for my own accommodation business. An AI
+                document-ingestion pipeline for a legal workflow. A multi-channel chatbot that
+                runs on real customer enquiries. They handle real users. They&apos;re still running.
               </p>
             </FadeIn>
             <FadeIn delay={0.15}>
               <p className="text-lg text-fg-muted leading-relaxed text-pretty">
                 The AI side is not a bolt-on. I&apos;ve built RAG pipelines using LangChain and
                 pgvector, connected them to OpenAI&apos;s API, and deployed them on workflows
-                where they handle actual customer queries — not toy examples. I know where this
-                technology earns its keep and where it doesn&apos;t.
+                where they handle actual customer queries. I&apos;ve seen this technology waste
+                money on use cases it can&apos;t handle. I&apos;ve also seen it cut response times
+                from hours to seconds in the right place.
               </p>
             </FadeIn>
             <FadeIn delay={0.2}>
               <p className="text-lg text-fg-muted leading-relaxed text-pretty">
                 I&apos;m based in London. I work alone. My clients deal directly with the
-                engineer — not a sales contact who passes work to a development team they&apos;ve
-                never met. Plain English, no jargon, no surprises on the invoice.
+                engineer. There&apos;s no account manager in between. Plain English throughout.
+                The invoice matches what we agreed.
               </p>
             </FadeIn>
           </div>
@@ -147,8 +146,8 @@ export default function AboutPage() {
               What I build with
             </h2>
             <p className="mt-4 text-lg text-fg-muted text-pretty">
-              These are the tools I use on every project — not a list of things I&apos;ve
-              heard of.
+              These are the tools I use on every project. I&apos;ve shipped production
+              code with each one.
             </p>
           </FadeIn>
 
@@ -173,7 +172,7 @@ export default function AboutPage() {
               The rest of it
             </h2>
             <p className="mt-6 text-lg text-fg-muted leading-relaxed text-pretty">
-              I&apos;m a classically trained chef — forty-plus years in the kitchen, trained in the
+              I&apos;m a classically trained chef, forty-plus years in the kitchen, trained in the
               Paul Bocuse tradition. I run a personal chef service at{" "}
               <a
                 href="https://bjluc.co.uk"
@@ -211,13 +210,13 @@ export default function AboutPage() {
               Why I work solo
             </h2>
             <p className="mt-6 text-lg text-fg-muted leading-relaxed text-pretty">
-              When you email me, you email me. There&apos;s no account manager, no sales team, no
-              escalation path. The person quoting the work is the person doing the work.
+              When you email me, you email me. No account manager. No sales team. No escalation
+              path. The person quoting the work is the person doing the work.
             </p>
             <p className="mt-4 text-lg text-fg-muted leading-relaxed text-pretty">
               That means fewer meetings, lower overhead, and a site that reflects what you
-              actually asked for — not what got lost in translation between the person who took
-              the brief and the one who built it.
+              actually asked for. When there&apos;s only one person on the project, nothing gets
+              lost in translation.
             </p>
           </FadeIn>
         </div>
