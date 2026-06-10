@@ -11,6 +11,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { FadeIn, FadeInStagger, FadeInItem } from "@/components/motion/fade-in";
+import { HeroGrid } from "@/components/hero/hero-grid";
 
 export const metadata: Metadata = {
   title: "audemation — Free website mockups for UK small businesses",
@@ -67,6 +68,9 @@ export default function HomePage() {
     <>
       {/* ========== HERO ========== */}
       <section className="relative overflow-hidden bg-hero-gradient">
+        {/* Animated grid background — subtle, code/web/dev coded */}
+        <HeroGrid />
+
         {/* Decorative gradient blob */}
         <div
           aria-hidden
