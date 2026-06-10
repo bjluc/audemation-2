@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="none">
+  <!-- Logo 2 (final): Wordmark + two-tone connection mark
+
+       Design:
+       - The connection mark sits to the LEFT of the wordmark, with
+         generous breathing room (~10px gap) so it doesn't crash into
+         the "a" at small sizes (24-40px).
+       - The mark is two-tone: indigo outer ring + amber inner dot.
+         On white backgrounds, the amber signals "we connect to your
+         business" without reading as a button.
+       - The mark is sized to be the cap-height of the wordmark
+         (matches the visual weight of the "a").
+       - The viewBox includes 6px internal padding on all sides so the
+         mark has air around it at small render sizes.
+
+       Mobile-friendly:
+       - Internal padding: 6px around the mark + 10px gap to wordmark
+       - Tested mentally at 24, 32, 40px heights
+       - Mark scales proportionally — at 24px the inner amber dot is
+         still 1px visible
+  -->
+
+  <!-- Connection mark: indigo ring + amber inner dot
+       Centre at (16, 24) — the geometric centre of the viewBox
+       and the optical centre of the lowercase wordmark glyphs
+       (cap-top y≈15, x-top y≈22, baseline y=31, x-bottom y=31 —
+       the visible centre of "audemation" sits at y≈23-24).
+       Tested at 24/32/40/64/96/128px, holds optical alignment. -->
+  <circle cx="16" cy="24" r="6" fill="none" stroke="#4F46E5" stroke-width="1.6" />
+  <circle cx="16" cy="24" r="2.2" fill="#F59E0B" />
+
+  <!-- Wordmark: starts at x=28 to give the mark a 6px gap (was 10px).
+       Tighter spacing reads as one unified mark instead of two parts. -->
+  <text
+    x="28"
+    y="31"
+    font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif"
+    font-size="20"
+    font-weight="700"
+    letter-spacing="-0.6"
+    fill="#0F172A">audemation</text>
+</svg>

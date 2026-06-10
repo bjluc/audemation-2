@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="none">
+  <!-- Logo 2 (final) — DARK BACKGROUND VARIANT
+       Same two-tone connection mark + wordmark, with colours tuned
+       for the slate-900 footer:
+         - Indigo ring shifts to a5b4fc (lighter) so it doesn't
+           disappear into the dark background
+         - Amber inner dot shifts to fbbf24 (brighter) so it pops
+         - Wordmark in slate-100
+  -->
+
+  <circle cx="16" cy="24" r="6" fill="none" stroke="#A5B4FC" stroke-width="1.6" />
+  <circle cx="16" cy="24" r="2.2" fill="#FBBF24" />
+
+  <text
+    x="28"
+    y="31"
+    font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif"
+    font-size="20"
+    font-weight="700"
+    letter-spacing="-0.6"
+    fill="#F1F5F9">audemation</text>
+</svg>
