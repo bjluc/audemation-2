@@ -95,9 +95,7 @@ export default function HomePage() {
               I rebuild your tired website for free.
             </h1>
             <p className="mt-6 text-lg md:text-xl text-fg-muted max-w-2xl leading-relaxed text-pretty">
-              I find UK small businesses whose websites are doing them no
-              favours, build a modern sample at no charge, and if you want it —
-              I deliver the real thing.
+              {"I find many UK small businesses whose websites aren't doing them any favours. I can build a modern sample at no charge if you'd like. I deliver the real thing."}
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-3">
               <Link href="/contact" className="btn-brand group">
@@ -225,7 +223,7 @@ export default function HomePage() {
             </h2>
             <p className="mt-4 text-lg text-fg-muted text-pretty">
               These run while you sleep. They pay for the site within a few
-              months — then they keep paying.
+              months then they keep paying.
             </p>
           </FadeIn>
 

@@ -36,7 +36,12 @@ export function FadeIn({
   ...rest
 }: FadeInProps) {
   return (
+    // suppressHydrationWarning: framer-motion's whileInView adds `style` attributes
+    // (opacity, transform) that differ between the server-rendered HTML and the
+    // client's first paint. The element still animates to the correct state on
+    // hydration; this just silences the false-positive React warning.
     <motion.div
+      suppressHydrationWarning
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once, amount }}
@@ -58,6 +63,7 @@ export function FadeInStagger({
 }: HTMLMotionProps<"div"> & { children: ReactNode }) {
   return (
     <motion.div
+      suppressHydrationWarning
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -80,6 +86,7 @@ export function FadeInItem({
 }: HTMLMotionProps<"div"> & { children: ReactNode; y?: number }) {
   return (
     <motion.div
+      suppressHydrationWarning
       variants={{
         hidden: { opacity: 0, y },
         visible: {

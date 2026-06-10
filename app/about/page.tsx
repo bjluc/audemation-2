@@ -103,35 +103,22 @@ export default function AboutPage() {
           <div className="mt-8 max-w-2xl space-y-6">
             <FadeIn delay={0.05}>
               <p className="text-lg text-fg-muted leading-relaxed text-pretty">
-                I spent over twenty years running my own businesses before I wrote a line of
-                production code. That included a serviced accommodation operation and hospitality
-                work in North London, managing bookings, suppliers, and maintenance schedules. The
-                small crises that come with running a property-based business: a burst pipe at
-                11pm, a guest who can&apos;t find the key safe, a cleaner who cancels at short notice.
+                I spent over twenty years running my own businesses before I wrote a line of production code. That included a serviced accommodation operation and hospitality work in North London, managing bookings, suppliers, and maintenance schedules. The small crises that come with running a property-based business: a burst pipe at 11pm, a guest who can&apos;t find the key safe, a cleaner who cancels at short notice.
               </p>
             </FadeIn>
             <FadeIn delay={0.1}>
               <p className="text-lg text-fg-muted leading-relaxed text-pretty">
-                I&apos;m a full-stack engineer. I&apos;ve shipped three real production systems. A
-                booking and management platform for my own accommodation business. An AI
-                document-ingestion pipeline for a legal workflow. A multi-channel chatbot that
-                runs on real customer enquiries. They handle real users. They&apos;re still running.
+                I&apos;m a full-stack engineer. I&apos;ve shipped three real production systems. A booking and management platform for my own accommodation business. An AI document-ingestion pipeline for a legal workflow. A multi-channel chatbot that runs on real customer enquiries. They handle real users. They&apos;re still running.
               </p>
             </FadeIn>
             <FadeIn delay={0.15}>
               <p className="text-lg text-fg-muted leading-relaxed text-pretty">
-                The AI side is not a bolt-on. I&apos;ve built RAG pipelines using LangChain and
-                pgvector, connected them to OpenAI&apos;s API, and deployed them on workflows
-                where they handle actual customer queries. I&apos;ve seen this technology waste
-                money on use cases it can&apos;t handle. I&apos;ve also seen it cut response times
-                from hours to seconds in the right place.
+                The AI side is not a bolt-on. I&apos;ve built RAG pipelines using LangChain and pgvector, connected them to OpenAI&apos;s API, and deployed them in workflows that handle actual customer queries. I&apos;ve seen this technology waste money on use cases it can&apos;t handle. I&apos;ve also seen it cut response times from hours to seconds in the right place.
               </p>
             </FadeIn>
             <FadeIn delay={0.2}>
               <p className="text-lg text-fg-muted leading-relaxed text-pretty">
-                I&apos;m based in London. I work alone. My clients deal directly with the
-                engineer. There&apos;s no account manager in between. Plain English throughout.
-                The invoice matches what we agreed.
+                I&apos;m based in London. I work alone. My clients deal directly with the engineer. There&apos;s no account manager in between. Plain English throughout. The invoice matches what we agreed.
               </p>
             </FadeIn>
           </div>
