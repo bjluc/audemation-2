@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   },
   description:
     "I find UK small businesses with tired websites, build them a free modern sample, and if they want it I deliver the real thing plus the automations that make it pay for itself.",
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+  },
   openGraph: {
     type: "website",
     locale: "en_GB",

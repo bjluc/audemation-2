@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- audemation favicon
+       The two-tone mark from Logo 2, isolated and centred.
+       Square viewBox so it works as a 16/32/180px favicon.
+       White background so the mark has contrast in any tab colour
+       (the favicon appears in white-on-white tabs, dark tabs, etc.). -->
+
+  <!-- Background tile (rounded white square) -->
+  <rect x="0" y="0" width="32" height="32" rx="7" fill="#ffffff" />
+
+  <!-- Connection mark: indigo ring + amber inner dot, centred -->
+  <circle cx="16" cy="16" r="8" fill="none" stroke="#4F46E5" stroke-width="2.2" />
+  <circle cx="16" cy="16" r="3" fill="#F59E0B" />
+</svg>

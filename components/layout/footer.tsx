@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Logo } from "@/components/layout/logo";
 
 const siteLinks = [
   { href: "/", label: "Home" },
@@ -23,13 +24,10 @@ export function Footer() {
           <div className="md:col-span-5">
             <Link
               href="/"
-              className="inline-flex items-center gap-1.5"
+              className="inline-flex items-center"
               aria-label="audemation — home"
             >
-              <span className="inline-block w-2.5 h-2.5 rounded-full bg-brand" />
-              <span className="font-bold text-fg-on-dark text-xl tracking-tight">
-                audemation
-              </span>
+              <Logo variant="dark" height={32} />
             </Link>
             <p className="mt-4 text-fg-muted-on-dark max-w-sm leading-relaxed">
               Free website mockups for UK small businesses. I find the sites

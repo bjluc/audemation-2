@@ -9,6 +9,7 @@ import {
   SheetTrigger,
   SheetClose,
 } from "@/components/ui/sheet";
+import { Logo } from "@/components/layout/logo";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -27,13 +28,10 @@ export function Header() {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-1.5 shrink-0 group"
+          className="flex items-center shrink-0 group"
           aria-label="audemation — home"
         >
-          <span className="inline-block w-2 h-2 rounded-full bg-brand group-hover:scale-110 transition-transform" />
-          <span className="font-bold text-fg text-lg tracking-tight">
-            audemation
-          </span>
+          <Logo variant="light" height={28} className="group-hover:opacity-80 transition-opacity" />
         </Link>
 
         {/* Desktop nav */}
@@ -73,10 +71,9 @@ export function Header() {
                 <Link
                   href="/"
                   onClick={() => setOpen(false)}
-                  className="flex items-center gap-1.5"
+                  className="flex items-center"
                 >
-                  <span className="inline-block w-2 h-2 rounded-full bg-brand" />
-                  <span className="font-bold text-fg text-lg">audemation</span>
+                  <Logo variant="light" height={28} />
                 </Link>
                 <SheetClose
                   className="inline-flex items-center justify-center w-9 h-9 rounded-lg text-fg-muted hover:bg-bg-alt transition-colors"
