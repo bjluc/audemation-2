@@ -27,7 +27,7 @@ export function Footer() {
               className="inline-flex items-center"
               aria-label="audemation — home"
             >
-              <Logo variant="dark" height={32} />
+              <Logo variant="dark" height={44} />
             </Link>
             <p className="mt-4 text-fg-muted-on-dark max-w-sm leading-relaxed">
               Free website mockups for UK small businesses. I find the sites
