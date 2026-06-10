@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import { Send, Mail, CheckCircle2, ArrowRight } from "lucide-react";
 import { FadeIn, FadeInStagger, FadeInItem } from "@/components/motion/fade-in";
+import { HeroGrid } from "@/components/hero/hero-grid";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -137,6 +138,9 @@ export default function ContactPage() {
     <>
       {/* ========== HERO ========== */}
       <section className="relative overflow-hidden bg-hero-gradient">
+        {/* Subtle line grid — site-wide identity motif */}
+        <HeroGrid variant="subtle" />
+
         <div
           aria-hidden
           className="pointer-events-none absolute -top-32 -right-40 w-[600px] h-[600px] rounded-full opacity-30 blur-3xl"

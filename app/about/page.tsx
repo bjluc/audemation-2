@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { FadeIn, FadeInStagger, FadeInItem } from "@/components/motion/fade-in";
+import { HeroGrid } from "@/components/hero/hero-grid";
 
 export const metadata: Metadata = {
   title: "About · audemation",
@@ -49,6 +50,9 @@ export default function AboutPage() {
     <>
       {/* ========== HERO ========== */}
       <section className="relative overflow-hidden bg-hero-gradient">
+        {/* Subtle line grid — site-wide identity motif */}
+        <HeroGrid variant="subtle" />
+
         <div
           aria-hidden
           className="pointer-events-none absolute -top-32 -right-40 w-[600px] h-[600px] rounded-full opacity-30 blur-3xl"
