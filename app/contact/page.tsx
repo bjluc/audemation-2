@@ -16,6 +16,8 @@ type FormValues = {
 
 type FormErrors = Partial<Record<keyof FormValues, string>>;
 
+type SubmitStatus = "idle" | "submitting" | "success" | "error";
+
 function validate(values: FormValues): FormErrors {
   const errors: FormErrors = {};
   if (!values.businessName.trim()) errors.businessName = "Please enter your business name.";
@@ -54,7 +56,8 @@ export default function ContactPage() {
     description: "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
-  const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
+  const [status, setStatus] = useState<SubmitStatus>("idle");
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const businessNameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
@@ -70,8 +73,8 @@ export default function ContactPage() {
     }
   }
 
-  // TODO: replace this stub with a real POST to /api/contact (Phase 2)
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  // Phase 2: real POST to /api/contact → Gmail OAuth2.
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const newErrors = validate(values);
     if (Object.keys(newErrors).length > 0) {
@@ -81,8 +84,53 @@ export default function ContactPage() {
       else if (newErrors.description) descriptionRef.current?.focus();
       return;
     }
+
     setStatus("submitting");
-    setTimeout(() => setStatus("success"), 200);
+    setSubmitError(null);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          businessName: values.businessName.trim(),
+          websiteUrl: values.websiteUrl.trim(),
+          email: values.email.trim(),
+          description: values.description.trim(),
+        }),
+      });
+
+      const data: {
+        ok: boolean;
+        error?: string;
+        fields?: Record<string, string>;
+      } = await res.json().catch(() => ({ ok: false, error: "Unexpected server response." }));
+
+      if (!res.ok || !data.ok) {
+        // Server may have returned per-field errors — surface them inline.
+        if (data.fields) {
+          setErrors(data.fields);
+          if (data.fields.businessName) businessNameRef.current?.focus();
+          else if (data.fields.email) emailRef.current?.focus();
+          else if (data.fields.description) descriptionRef.current?.focus();
+        }
+        setSubmitError(
+          data.error ||
+            (res.status === 429
+              ? "Too many requests right now. Please try again later."
+              : "Something went wrong. Please try again or email hello@audemation.com directly.")
+        );
+        setStatus("error");
+        return;
+      }
+
+      setStatus("success");
+    } catch {
+      setSubmitError(
+        "Network error. Please check your connection and try again, or email hello@audemation.com directly."
+      );
+      setStatus("error");
+    }
   }
 
   return (
@@ -296,6 +344,14 @@ export default function ContactPage() {
 
                   {/* Submit */}
                   <div>
+                    {submitError && (
+                      <div
+                        role="alert"
+                        className="mb-4 rounded-xl border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-800"
+                      >
+                        {submitError}
+                      </div>
+                    )}
                     <button
                       type="submit"
                       disabled={status === "submitting"}
