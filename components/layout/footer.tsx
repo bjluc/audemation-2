@@ -17,8 +17,8 @@ const legalLinks = [
 export function Footer() {
   return (
     <footer className="bg-dark-gradient text-fg-on-dark mt-24">
-      <div className="container-x py-16 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8">
+      <div className="container-x py-16 md:py-20 pb-20 md:pb-24">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 text-center md:text-left">
           {/* Brand block — takes more space */}
           <div className="md:col-span-5">
             <Link
@@ -28,7 +28,7 @@ export function Footer() {
             >
               <Logo variant="dark" height={44} />
             </Link>
-            <p className="mt-4 text-fg-muted-on-dark max-w-sm leading-relaxed">
+            <p className="mt-4 text-fg-muted-on-dark max-w-sm leading-relaxed md:mx-0 mx-auto">
               Free website mockups for UK small businesses. I find the sites
               that need the most help, build a modern sample at no charge, and
               deliver the real thing when you&apos;re ready.
