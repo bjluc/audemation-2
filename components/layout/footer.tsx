@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Logo } from "@/components/layout/logo";
 
 const siteLinks = [
-  { href: "/", label: "Home" },
   { href: "/how-it-works", label: "How it works" },
   { href: "/mockups", label: "Mockups" },
   { href: "/automations", label: "Automations" },
@@ -89,7 +88,7 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-14 pt-6 border-t border-line-on-dark flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+        <div className="mt-14 pt-6 border-t border-line-on-dark flex flex-col md:flex-row items-center md:items-center justify-between gap-3 text-center md:text-left">
           <p className="text-sm text-fg-muted-on-dark">
             &copy; {new Date().getFullYear()} audemation. All rights reserved.
           </p>
