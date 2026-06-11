@@ -6,56 +6,63 @@ import { FadeIn, FadeInStagger, FadeInItem } from "@/components/motion/fade-in";
 export const metadata: Metadata = {
   title: "Mockups",
   description:
-    "A before-and-after gallery of website rebuilds for UK small businesses. Featured entry: the previous audemation.com.",
+    "A selection of real sites I've built for clients. Featured entry: the previous audemation.com.",
 };
 
 interface GalleryCard {
   id: string;
   category: string;
   caption: string;
-  whatChanged: string;
+  detail: string;
+  image: string;
+  imageAlt: string;
+  liveUrl?: string;
+  liveLabel?: string;
+  secondaryUrl?: string;
+  secondaryLabel?: string;
 }
 
 const galleryCards: GalleryCard[] = [
   {
-    id: "tradesperson",
-    category: "Tradesperson · North England",
+    id: "casacomfort",
+    category: "Serviced accommodation · Rugby & Liverpool",
     caption:
-      "Replaced stock photos with real job-site photographs; cut the enquiry form from seven fields to three.",
-    whatChanged:
-      "The original site relied on generic construction stock photos that looked nothing like the actual work on offer. Swapping them for real on-site photographs (even imperfect phone shots) immediately grounded the business and gave visitors something concrete to judge. The enquiry form had accumulated seven fields over the years: full name, company, address, two phone numbers, project type, and a budget range. Cutting it to name, email, and a short description removed the main reason people were abandoning it halfway through.",
+      "Custom branding and a multi-property site covering Rugby and Liverpool under one roof.",
+    detail:
+      "Built for a serviced-accommodation operator running two properties: a Rugby unit for contractors near the motorway junctions, and a Liverpool unit. The site is a single WordPress build with a separate landing page per property, a unified booking enquiry flow, and a crown-and-house mark in black and amber so the brand reads as one company even though the locations are 120 miles apart.",
+    image: "/mockups/casacomfort-home.png",
+    imageAlt:
+      "Screenshot of Casa Comfort Stay, a serviced-accommodation site with a black and amber brand, custom crown logo, and three property cards (Rugby, Liverpool, Landlords).",
+    liveUrl: "https://casacomfortstay.co.uk/",
+    liveLabel: "View the live site",
   },
   {
-    id: "cafe",
-    category: "Independent café · Bristol",
+    id: "anshappyhomes",
+    category: "Holiday rental · Mechelen, Belgium",
     caption:
-      "Added a live menu in place of a downloadable PDF; moved the address and opening hours above the fold.",
-    whatChanged:
-      "The menu was buried two clicks deep as a PDF last updated in 2021, invisible to anyone on a phone and impossible to update without a designer. Replacing it with a simple scrollable page means it works on any device and can be changed in under a minute. The address and opening hours (the two things most café visitors actually need) were hidden in the footer. Moving them above the fold saved first-time visitors from hunting around the page.",
+      "Custom logo, olive-and-yellow identity, and a full-bleed hero built around the property's own photographs.",
+    detail:
+      "Built for a holiday rental in Mechelen, Belgium, close to the canal and an easy walk from the city centre. The most distinctive part of the build is the photography: every photo on the site is of the actual property (interior, garden, kitchen, lounge), taken on a phone by the host, not stock. The custom house-in-laurel-wreath mark and the olive-and-yellow palette are tied to the property's own front door colour, so the brand and the building line up. One click takes a visitor to a Book Now CTA above the fold.",
+    image: "/mockups/anshappyhomes-home.png",
+    imageAlt:
+      "Screenshot of Ans Happy Homes, a Mechelen holiday rental with a custom laurel-wreath logo, olive-green header, and a full-bleed photo of the property's dining area looking out to the garden.",
+    liveUrl: "https://www.anshappyhomes.com/",
+    liveLabel: "View the live site",
   },
   {
-    id: "chiropractor",
-    category: "Chiropractor · Surrey",
+    id: "chiaora",
+    category: "3D design prototype · Chelmsford",
     caption:
-      "Rebuilt the booking flow as a single-page form; removed an animated banner that was breaking on mobile.",
-    whatChanged:
-      "Booking an appointment required clicking through to a third-party site that opened in a new tab, with a different visual style and no clear confirmation step. Bringing the booking form directly onto the main site (three fields, one submit button) removed the point of confusion where most visitors were dropping off. An animated banner from an earlier era of the web was causing layout breakages on modern mobile browsers; removing it alone improved the mobile experience noticeably.",
-  },
-  {
-    id: "accountant",
-    category: "Accountant · Manchester",
-    caption:
-      "Added a plain-English pricing page; rewrote the services section so a non-accountant can follow it.",
-    whatChanged:
-      "The services page described what the firm did in precise accounting terminology. Correct, but opaque to a small business owner who just needs to know whether their annual accounts are covered. Rewriting it in plain English, with a concrete list of what each package includes, made the decision much simpler. Adding a pricing page (even a transparent starting-from figure) removed the single most common enquiry, which was almost always asking about rates.",
-  },
-  {
-    id: "bnb",
-    category: "Boutique B&B · Brighton",
-    caption:
-      "Added a direct booking button above the fold; replaced broken gallery thumbnails with full-width room photographs.",
-    whatChanged:
-      "The only booking option was a link to a major OTA, which meant the B&B was paying commission on every room night they could have taken direct. Adding a clearly labelled 'Book direct' button (visible in the hero before any scrolling) gave guests the option before they clicked away. A gallery of twelve tiny thumbnails, several of which were returning broken image errors, was replaced with five full-width photographs that actually showed the rooms and the seafront view.",
+      "Built a dark 3D motion prototype to pitch a from-scratch rebrand. The client chose WordPress for delivery; that build is live now.",
+    detail:
+      "I designed and built the prototype to show the client what was possible: a dark theme, animated purple topography background, a 3D rendered model of the project house as the hero, and a small single-mouse scroll cue. The full WordPress site at chiaora.co.uk is the final delivered version. Different stack, same brief. Both links are below.",
+    image: "/mockups/chiaora-prototype.png",
+    imageAlt:
+      "Screenshot of the Chiaora 3D motion prototype, a dark website with a 3D rendered modern house as the hero, purple topography lines flowing through the background, and the headline Hi, I'm Massimo.",
+    liveUrl: "https://chiaora.onrender.com/",
+    liveLabel: "View the 3D prototype",
+    secondaryUrl: "https://chiaora.co.uk/",
+    secondaryLabel: "View the WordPress site",
   },
 ];
 
@@ -73,9 +80,8 @@ export default function MockupsPage() {
               The gallery.
             </h1>
             <p className="mt-5 text-lg md:text-xl text-fg-muted max-w-xl leading-relaxed text-pretty">
-              Before-and-afters from real sites I&apos;ve rebuilt or mocked up
-              for UK small businesses. The featured entry is the previous
-              version of the very site you&apos;re reading now.
+              Real sites, built for clients. The featured entry is the
+              previous version of the very site you&apos;re reading now.
             </p>
           </FadeIn>
         </div>
@@ -97,56 +103,56 @@ export default function MockupsPage() {
                 </span>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2">
-                {/* Image side */}
-                <div className="aspect-[4/3] md:aspect-auto md:min-h-[420px] bg-gradient-to-br from-brand-soft to-warm-soft flex flex-col items-center justify-center gap-2">
-                  <span className="text-sm font-semibold text-fg-muted">
-                    Screenshot: before
-                  </span>
-                  <span className="text-xs text-fg-muted/60">
-                    Previous version
-                  </span>
+              <div className="grid grid-cols-1 md:grid-cols-2 md:items-center">
+                {/* Image side — actual screenshot of the old site */}
+                <div className="aspect-[8/5] p-6 md:p-8 border-b md:border-b-0 md:border-r border-line">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/mockups/audemation-old-home.png"
+                    alt="Screenshot of the previous audemation.com — an Airbnb chatbot service"
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
 
                 {/* Text side */}
                 <div className="p-8 md:p-10 lg:p-12 flex flex-col justify-center">
                   <h2 className="text-2xl md:text-3xl font-bold text-fg text-balance">
-                    audemation.com: the rebuild of this site
+                    audemation.com: the pivot
                   </h2>
                   <p className="mt-3 text-fg-muted leading-relaxed">
-                    The first entry in the gallery is the previous version of
-                    the very site you&apos;re looking at.
+                    The first entry in the gallery is the previous version
+                    of this site, which served a different business entirely.
                   </p>
 
                   <div className="mt-6 space-y-3 text-sm md:text-base text-fg-muted leading-relaxed">
                     <p>
-                      The old site had the right instincts but poor execution.
-                      Typography was loose, with too many font weights and
-                      inconsistent spacing throughout. The hero said
-                      &ldquo;free website mockup&rdquo; but buried the offer in
-                      the fourth paragraph, so visitors without context had no
-                      clear reason to stay.
+                      The old site was a dark, AI-focused pitch for an
+                      Airbnb chatbot service: a stock-photo man in a suit,
+                      purple gradients, and six navigation items
+                      (Home, About, Services, Benefits, Technology,
+                      AirbnbBot, Contact). It told a narrow story about
+                      one specific automation product, aimed at a narrow
+                      audience.
                     </p>
                     <p>
-                      This version tightens everything down to a single clear
-                      path: land, understand the offer in ten seconds, and the
-                      primary action is immediately in view. The navigation is
-                      lighter, the load time is faster, and the copy focuses on
-                      what the site actually does rather than describing the
-                      person behind it.
+                      This version keeps the brand name and the purple/indigo
+                      identity but pivots the whole site to what audemation
+                      actually does now: free website mockups for UK small
+                      businesses, with a separate page for the automations
+                      work that the old site led with. The hero says what
+                      the offer is in the first sentence, the navigation is
+                      lighter, and the contact form is one field set
+                      instead of three scattered calls to action.
                     </p>
                     <p>
-                      The contact flow now takes thirty seconds instead of
-                      hunting for a buried email address. Real work examples
-                      appear in this gallery rather than as vague claims on a
-                      services page.
+                      The old site is still live if you want to compare
+                      side by side.
                     </p>
                   </div>
 
                   <div className="mt-8">
-                    {/* TODO: update with the actual old Vercel URL. Bernard will swap this after Wave A */}
                     <Link
-                      href="https://audemation-old.vercel.app"
+                      href="https://audemation.vercel.app"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-brand font-semibold hover:underline"
@@ -170,8 +176,7 @@ export default function MockupsPage() {
               More from the gallery.
             </h2>
             <p className="mt-4 text-lg text-fg-muted text-pretty">
-              Anonymised examples from real UK businesses. Click any card to
-              see the before-and-after detail.
+              Real sites, live now. Click any card for the project detail.
             </p>
           </FadeIn>
 
@@ -180,11 +185,14 @@ export default function MockupsPage() {
               <FadeInItem key={card.id}>
                 <details className="group card-lift overflow-hidden p-0">
                   <summary className="list-none cursor-pointer">
-                    {/* Placeholder image */}
-                    <div className="aspect-[4/3] bg-gradient-to-br from-brand-soft to-warm-soft flex items-center justify-center">
-                      <span className="text-sm font-medium text-fg-muted">
-                        Before &amp; after
-                      </span>
+                    {/* Card image — real site screenshot */}
+                    <div className="aspect-[4/3] bg-bg-alt overflow-hidden border-b border-line">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={card.image}
+                        alt={card.imageAlt}
+                        className="w-full h-full object-cover object-top"
+                      />
                     </div>
 
                     <div className="p-5 flex items-start justify-between gap-3">
@@ -195,9 +203,6 @@ export default function MockupsPage() {
                         <p className="mt-1 text-sm text-fg-muted leading-snug">
                           {card.caption}
                         </p>
-                        <p className="mt-3 text-xs text-fg-muted/60">
-                          Real example coming soon
-                        </p>
                       </div>
                       <ChevronDown className="w-4 h-4 text-fg-muted shrink-0 mt-0.5 transition-transform duration-300 group-open:rotate-180" />
                     </div>
@@ -205,21 +210,36 @@ export default function MockupsPage() {
 
                   {/* Expanded detail */}
                   <div className="border-t border-line px-5 pt-4 pb-5">
-                    <div className="grid grid-cols-2 gap-3 mb-4">
-                      <div className="aspect-[4/3] bg-gradient-to-br from-brand-soft to-warm-soft rounded-xl flex items-center justify-center">
-                        <span className="text-xs font-medium text-fg-muted">
-                          Before
-                        </span>
-                      </div>
-                      <div className="aspect-[4/3] bg-gradient-to-br from-warm-soft to-brand-soft rounded-xl flex items-center justify-center">
-                        <span className="text-xs font-medium text-fg-muted">
-                          After
-                        </span>
-                      </div>
-                    </div>
                     <p className="text-sm text-fg-muted leading-relaxed">
-                      {card.whatChanged}
+                      {card.detail}
                     </p>
+
+                    {(card.liveUrl || card.secondaryUrl) && (
+                      <div className="mt-5 flex flex-col sm:flex-row gap-3">
+                        {card.liveUrl && (
+                          <Link
+                            href={card.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center gap-2 h-10 px-4 rounded-lg bg-brand text-fg-on-brand text-sm font-semibold hover:opacity-90 transition-opacity"
+                          >
+                            {card.liveLabel ?? "View the live site"}
+                            <ExternalLink className="w-3.5 h-3.5" />
+                          </Link>
+                        )}
+                        {card.secondaryUrl && (
+                          <Link
+                            href={card.secondaryUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center gap-2 h-10 px-4 rounded-lg border border-line text-fg text-sm font-semibold hover:bg-bg-alt transition-colors"
+                          >
+                            {card.secondaryLabel ?? "View the live site"}
+                            <ExternalLink className="w-3.5 h-3.5" />
+                          </Link>
+                        )}
+                      </div>
+                    )}
                   </div>
                 </details>
               </FadeInItem>
