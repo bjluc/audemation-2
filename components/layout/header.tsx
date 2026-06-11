@@ -10,6 +10,7 @@ import {
   SheetClose,
 } from "@/components/ui/sheet";
 import { Logo } from "@/components/layout/logo";
+import { ThemeToggle } from "@/components/layout/theme-toggle";
 
 const navLinks = [
   { href: "/how-it-works", label: "How it works" },
@@ -22,7 +23,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-line">
+    <header className="sticky top-0 z-50 bg-bg/80 backdrop-blur-md border-b border-line">
       <div className="container-x flex items-center h-16">
         {/* Logo — left */}
         <Link
@@ -30,43 +31,45 @@ export function Header() {
           className="flex items-center shrink-0 group"
           aria-label="audemation — home"
         >
-          <Logo variant="light" height={40} className="group-hover:opacity-80 transition-opacity" />
+          <Logo variant="auto" height={48} className="group-hover:opacity-80 transition-opacity" />
         </Link>
 
         {/* Desktop nav + CTA — right cluster */}
-        <div className="ml-auto hidden md:flex items-center gap-1">
+        <div className="ml-auto hidden lg:flex items-center gap-1">
           <nav className="flex items-center gap-1" aria-label="Primary">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative inline-flex h-9 items-center px-3 text-sm font-medium text-fg-muted hover:text-fg transition-colors group"
+                className="relative inline-flex h-9 items-center px-3 text-sm font-medium whitespace-nowrap text-fg-muted hover:text-fg transition-colors group"
               >
                 {link.label}
                 <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-brand scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
               </Link>
             ))}
           </nav>
+          <ThemeToggle size="sm" className="ml-2" />
           <Link
             href="/contact"
-            className="btn-brand inline-flex h-10 px-5 text-sm ml-3"
+            className="btn-brand inline-flex h-9 px-4 text-sm ml-3"
           >
             Get a free mockup
           </Link>
         </div>
 
-        {/* Mobile trigger only */}
-        <div className="ml-auto md:hidden flex items-center gap-2">
+        {/* Mobile/tablet trigger only */}
+        <div className="ml-auto lg:hidden flex items-center gap-2">
+          <ThemeToggle />
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger
-              className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-line text-fg hover:bg-bg-alt transition-colors"
+              className="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-line text-fg hover:bg-bg-alt transition-colors"
               aria-label="Open menu"
             >
               <Menu className="w-5 h-5" />
             </SheetTrigger>
             <SheetContent
               side="right"
-              className="w-[300px] sm:w-[340px] p-0 bg-white"
+              className="w-[300px] sm:w-[340px] p-0 bg-bg"
               showCloseButton={false}
             >
               <div className="flex items-center justify-between p-5 border-b border-line">
@@ -75,7 +78,7 @@ export function Header() {
                   onClick={() => setOpen(false)}
                   className="flex items-center"
                 >
-                  <Logo variant="light" height={34} />
+                  <Logo variant="auto" height={34} />
                 </Link>
                 <SheetClose
                   className="inline-flex items-center justify-center w-9 h-9 rounded-lg text-fg-muted hover:bg-bg-alt transition-colors"

@@ -9,6 +9,9 @@
  * Variants:
  *   variant="light" (default) — for light backgrounds (slate-900 text)
  *   variant="dark"            — for dark backgrounds (slate-100 text)
+ *   variant="auto"            — follows the active theme (renders both
+ *                               files, CSS shows the right one; no
+ *                               hydration flash)
  *
  * Sizing:
  *   The SVG viewBox is 200×48 (aspect ratio 25:6). We render at the
@@ -20,9 +23,9 @@
  *   - The variant prop is more readable than "logo-2-wordmark-dark.svg"
  *   - Next.js can optimize the import if we want to switch to inline SVG later
  */
-type Variant = "light" | "dark";
+type Variant = "light" | "dark" | "auto";
 
-const SRC: Record<Variant, string> = {
+const SRC: Record<"light" | "dark", string> = {
   light: "/logos/logo-2-wordmark.svg",
   dark: "/logos/logo-2-wordmark-dark.svg",
 };
@@ -38,6 +41,32 @@ export function Logo({
 }) {
   // Width is derived from the 200:48 aspect ratio (25:6 ≈ 4.1667).
   const width = Math.round((height * 200) / 48);
+
+  if (variant === "auto") {
+    return (
+      <>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={SRC.light}
+          alt="audemation"
+          width={width}
+          height={height}
+          className={`dark:hidden ${className ?? ""}`}
+          decoding="async"
+        />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={SRC.dark}
+          alt="audemation"
+          width={width}
+          height={height}
+          className={`hidden dark:block ${className ?? ""}`}
+          decoding="async"
+        />
+      </>
+    );
+  }
+
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img

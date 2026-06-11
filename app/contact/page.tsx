@@ -153,7 +153,7 @@ export default function ContactPage() {
         />
         <div className="container-x relative pt-20 md:pt-32 pb-16 md:pb-24">
           <FadeIn className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-line text-sm font-medium text-fg-muted shadow-soft">
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface border border-line text-sm font-medium text-fg-muted shadow-soft">
               <span className="w-1.5 h-1.5 rounded-full bg-brand" />
               Free mockup. No credit card. No catch.
             </span>
@@ -225,10 +225,10 @@ export default function ContactPage() {
                         errors.businessName ? "businessName-error" : undefined
                       }
                       className={[
-                        "w-full h-11 rounded-xl border px-4 text-base text-fg placeholder:text-fg-muted bg-white",
+                        "w-full h-11 rounded-xl border px-4 text-base text-fg placeholder:text-fg-muted bg-surface",
                         "focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition-colors",
                         errors.businessName
-                          ? "border-red-400 bg-red-50"
+                          ? "border-red-400 bg-red-50 dark:border-red-500/60 dark:bg-red-950/30"
                           : "border-line",
                       ].join(" ")}
                     />
@@ -236,7 +236,7 @@ export default function ContactPage() {
                       <p
                         id="businessName-error"
                         role="alert"
-                        className="mt-1.5 text-sm text-red-600"
+                        className="mt-1.5 text-sm text-red-600 dark:text-red-400"
                       >
                         {errors.businessName}
                       </p>
@@ -261,7 +261,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       placeholder="https:// (leave blank if you don't have one)"
                       className={[
-                        "w-full h-11 rounded-xl border px-4 text-base text-fg placeholder:text-fg-muted bg-white",
+                        "w-full h-11 rounded-xl border px-4 text-base text-fg placeholder:text-fg-muted bg-surface",
                         "focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition-colors border-line",
                       ].join(" ")}
                     />
@@ -289,16 +289,16 @@ export default function ContactPage() {
                       aria-invalid={!!errors.email}
                       aria-describedby={errors.email ? "email-error" : undefined}
                       className={[
-                        "w-full h-11 rounded-xl border px-4 text-base text-fg placeholder:text-fg-muted bg-white",
+                        "w-full h-11 rounded-xl border px-4 text-base text-fg placeholder:text-fg-muted bg-surface",
                         "focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition-colors",
-                        errors.email ? "border-red-400 bg-red-50" : "border-line",
+                        errors.email ? "border-red-400 bg-red-50 dark:border-red-500/60 dark:bg-red-950/30" : "border-line",
                       ].join(" ")}
                     />
                     {errors.email && (
                       <p
                         id="email-error"
                         role="alert"
-                        className="mt-1.5 text-sm text-red-600"
+                        className="mt-1.5 text-sm text-red-600 dark:text-red-400"
                       >
                         {errors.email}
                       </p>
@@ -328,10 +328,10 @@ export default function ContactPage() {
                         errors.description ? "description-error" : undefined
                       }
                       className={[
-                        "w-full rounded-xl border px-4 py-3 text-base text-fg placeholder:text-fg-muted bg-white resize-none",
+                        "w-full rounded-xl border px-4 py-3 text-base text-fg placeholder:text-fg-muted bg-surface resize-none",
                         "focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition-colors",
                         errors.description
-                          ? "border-red-400 bg-red-50"
+                          ? "border-red-400 bg-red-50 dark:border-red-500/60 dark:bg-red-950/30"
                           : "border-line",
                       ].join(" ")}
                     />
@@ -339,7 +339,7 @@ export default function ContactPage() {
                       <p
                         id="description-error"
                         role="alert"
-                        className="mt-1.5 text-sm text-red-600"
+                        className="mt-1.5 text-sm text-red-600 dark:text-red-400"
                       >
                         {errors.description}
                       </p>
@@ -351,7 +351,7 @@ export default function ContactPage() {
                     {submitError && (
                       <div
                         role="alert"
-                        className="mb-4 rounded-xl border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-800"
+                        className="mb-4 rounded-xl border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-800 dark:border-red-500/40 dark:bg-red-950/30 dark:text-red-300"
                       >
                         {submitError}
                       </div>
@@ -450,14 +450,14 @@ export default function ContactPage() {
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 href="/how-it-works"
-                className="inline-flex items-center justify-center gap-2 h-12 px-6 rounded-xl bg-white text-fg font-semibold text-base hover:bg-bg-tint transition-colors group"
+                className="inline-flex items-center justify-center gap-2 h-12 px-6 rounded-xl whitespace-nowrap bg-white text-slate-900 font-semibold text-base hover:bg-indigo-50 transition-colors group"
               >
                 See how it works
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </Link>
               <Link
                 href="/mockups"
-                className="inline-flex items-center justify-center h-12 px-6 rounded-xl border border-line-on-dark text-fg-on-dark font-semibold text-base hover:bg-white/5 transition-colors"
+                className="inline-flex items-center justify-center h-12 px-6 rounded-xl whitespace-nowrap border border-line-on-dark text-fg-on-dark font-semibold text-base hover:bg-white/5 transition-colors"
               >
                 See examples
               </Link>

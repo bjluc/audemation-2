@@ -66,7 +66,7 @@ export default function MockupsPage() {
       <section className="section bg-hero-gradient">
         <div className="container-x">
           <FadeIn className="max-w-2xl">
-            <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-white border border-line text-sm font-medium text-fg-muted">
+            <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-surface border border-line text-sm font-medium text-fg-muted">
               Mockups
             </span>
             <h1 className="mt-4 text-4xl md:text-6xl font-bold text-fg tracking-tight text-balance">
@@ -86,12 +86,12 @@ export default function MockupsPage() {
         <div className="container-x">
           <FadeIn>
             <div
-              className="relative overflow-hidden rounded-3xl bg-white border-2 border-brand/20"
+              className="relative overflow-hidden rounded-3xl bg-surface border-2 border-brand/20"
               style={{ boxShadow: "var(--shadow-card-hover)" }}
             >
               {/* "Featured" pill */}
               <div className="absolute top-5 left-5 z-10">
-                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-line text-sm font-medium text-fg-muted shadow-soft">
+                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface border border-line text-sm font-medium text-fg-muted shadow-soft">
                   <span className="w-1.5 h-1.5 rounded-full bg-brand" />
                   Featured
                 </span>
@@ -242,13 +242,13 @@ export default function MockupsPage() {
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center h-12 px-6 rounded-xl bg-white text-fg font-semibold text-base hover:bg-bg-tint transition-colors"
+                className="inline-flex items-center justify-center h-12 px-6 rounded-xl whitespace-nowrap bg-white text-slate-900 font-semibold text-base hover:bg-indigo-50 transition-colors"
               >
                 Get your free mockup
               </Link>
               <Link
                 href="/how-it-works"
-                className="inline-flex items-center justify-center h-12 px-6 rounded-xl border border-line-on-dark text-fg-on-dark font-semibold text-base hover:bg-white/5 transition-colors"
+                className="inline-flex items-center justify-center h-12 px-6 rounded-xl whitespace-nowrap border border-line-on-dark text-fg-on-dark font-semibold text-base hover:bg-white/5 transition-colors"
               >
                 How it works
               </Link>

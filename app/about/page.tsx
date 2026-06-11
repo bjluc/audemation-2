@@ -69,7 +69,7 @@ export default function AboutPage() {
         />
         <div className="container-x relative pt-20 md:pt-32 pb-20 md:pb-28">
           <FadeIn className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-line text-sm font-medium text-fg-muted shadow-soft">
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface border border-line text-sm font-medium text-fg-muted shadow-soft">
               <span className="w-1.5 h-1.5 rounded-full bg-brand" />
               London-based · solo · plain English
             </span>
@@ -122,7 +122,7 @@ export default function AboutPage() {
             </FadeIn>
             <FadeIn delay={0.2}>
               <p className="text-lg text-fg-muted leading-relaxed text-pretty">
-                I&apos;m based in London. I work alone. My clients deal directly with the engineer. There&apos;s no account manager in between. Plain English throughout. The invoice matches what we agreed.
+                I&apos;m based in London. I&nbsp;work alone. My clients deal directly with the engineer. There&apos;s no account manager in between. Plain English throughout. The invoice matches what we agreed.
               </p>
             </FadeIn>
           </div>
@@ -164,7 +164,7 @@ export default function AboutPage() {
             </h2>
             <p className="mt-6 text-lg text-fg-muted leading-relaxed text-pretty">
               I&apos;m a classically trained chef, forty-plus years in the kitchen, trained in the
-              Paul Bocuse tradition. I run a personal chef service at{" "}
+              Paul Bocuse tradition. I&nbsp;run a personal chef service at{" "}
               <a
                 href="https://bjluc.co.uk"
                 target="_blank"
@@ -173,7 +173,7 @@ export default function AboutPage() {
               >
                 bjluc.co.uk
               </a>
-              . I also run{" "}
+              . I&nbsp;also run{" "}
               <a
                 href="https://topstay.uk"
                 target="_blank"
@@ -185,7 +185,7 @@ export default function AboutPage() {
               , a B2B serviced-accommodation business based in North London.
             </p>
             <p className="mt-4 text-lg text-fg-muted leading-relaxed text-pretty">
-              I cook. I run a serviced-accommodation business. I build websites for a living.
+              I cook. I&nbsp;run a serviced-accommodation business. I&nbsp;build websites for a living.
               None of those are on their own enough, but together they cover most of what a
               small business actually needs.
             </p>
@@ -227,14 +227,14 @@ export default function AboutPage() {
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center h-12 px-6 rounded-xl bg-white text-fg font-semibold text-base hover:bg-bg-tint transition-colors"
+                className="inline-flex items-center justify-center h-12 px-6 rounded-xl whitespace-nowrap bg-white text-slate-900 font-semibold text-base hover:bg-indigo-50 transition-colors"
               >
                 Get your free mockup
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
               <Link
                 href="/how-it-works"
-                className="inline-flex items-center justify-center h-12 px-6 rounded-xl border border-line-on-dark text-fg-on-dark font-semibold text-base hover:bg-white/5 transition-colors"
+                className="inline-flex items-center justify-center h-12 px-6 rounded-xl whitespace-nowrap border border-line-on-dark text-fg-on-dark font-semibold text-base hover:bg-white/5 transition-colors"
               >
                 See how it works
               </Link>

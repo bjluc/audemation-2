@@ -22,7 +22,7 @@ export function ComingSoon({ title, description, teasers }: ComingSoonProps) {
       <section className="bg-hero-gradient">
         <div className="container-x py-20 md:py-28">
           <FadeIn className="max-w-2xl">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-line text-sm font-medium text-fg-muted shadow-soft">
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface border border-line text-sm font-medium text-fg-muted shadow-soft">
               <span className="w-1.5 h-1.5 rounded-full bg-brand" />
               Coming in Phase 1
             </span>

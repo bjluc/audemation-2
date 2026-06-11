@@ -88,7 +88,7 @@ const faqs = [
   },
   {
     q: "What happens if I ignore the message about my mockup?",
-    a: "Nothing. I won't chase you, and there's no follow-up email sequence. If you change your mind later, you can always get in touch. The offer stands.",
+    a: "Nothing. I won't chase you, and there's no follow-up email sequence. If you change your mind later, you can always get in touch. The offer stands.",
   },
   {
     q: "Who owns the code, and who handles hosting?",
@@ -124,7 +124,7 @@ export default function HowItWorksPage() {
         />
         <div className="container-x relative pt-20 md:pt-32 pb-20 md:pb-28">
           <FadeIn className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-line text-sm font-medium text-fg-muted shadow-soft">
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface border border-line text-sm font-medium text-fg-muted shadow-soft">
               <span className="w-1.5 h-1.5 rounded-full bg-brand" />
               Six steps. Most projects wrap in weeks, not months.
             </span>
@@ -221,7 +221,7 @@ export default function HowItWorksPage() {
                 <ul className="space-y-4">
                   {doesntGet.map((item) => (
                     <li key={item} className="flex items-start gap-3">
-                      <span className="mt-0.5 flex-shrink-0 inline-flex items-center justify-center w-5 h-5 rounded-full bg-red-50 text-red-500">
+                      <span className="mt-0.5 flex-shrink-0 inline-flex items-center justify-center w-5 h-5 rounded-full bg-red-50 text-red-500 dark:bg-red-950/40 dark:text-red-400">
                         <X className="w-3 h-3" />
                       </span>
                       <span className="text-fg-muted text-sm leading-relaxed">
@@ -297,14 +297,14 @@ export default function HowItWorksPage() {
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center h-12 px-6 rounded-xl bg-white text-fg font-semibold text-base hover:bg-bg-tint transition-colors"
+                className="inline-flex items-center justify-center h-12 px-6 rounded-xl whitespace-nowrap bg-white text-slate-900 font-semibold text-base hover:bg-indigo-50 transition-colors"
               >
                 Get your free mockup
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
               <Link
                 href="/mockups"
-                className="inline-flex items-center justify-center h-12 px-6 rounded-xl border border-line-on-dark text-fg-on-dark font-semibold text-base hover:bg-white/5 transition-colors"
+                className="inline-flex items-center justify-center h-12 px-6 rounded-xl whitespace-nowrap border border-line-on-dark text-fg-on-dark font-semibold text-base hover:bg-white/5 transition-colors"
               >
                 See examples
               </Link>

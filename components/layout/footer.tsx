@@ -29,9 +29,9 @@ export function Footer() {
               <Logo variant="dark" height={44} />
             </Link>
             <p className="mt-4 text-fg-muted-on-dark max-w-sm leading-relaxed md:mx-0 mx-auto">
-              Free website mockups for UK small businesses. I find the sites
-              that need the most help, build a modern sample at no charge, and
-              deliver the real thing when you&apos;re ready.
+              Free website mockups for UK small businesses. I&nbsp;find the
+              sites that need the most help, build a modern sample at no
+              charge, and deliver the real thing when you&apos;re ready.
             </p>
           </div>
 
@@ -80,7 +80,7 @@ export function Footer() {
             </h3>
             <Link
               href="/contact"
-              className="inline-flex items-center h-10 px-4 rounded-lg bg-white text-fg text-sm font-semibold hover:bg-bg-tint transition-colors"
+              className="inline-flex items-center h-10 px-4 rounded-lg whitespace-nowrap bg-white text-slate-900 text-sm font-semibold hover:bg-indigo-50 transition-colors"
             >
               Free mockup
             </Link>

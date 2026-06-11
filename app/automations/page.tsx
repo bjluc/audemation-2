@@ -98,7 +98,7 @@ export default function AutomationsPage() {
 
         <div className="container-x relative pt-20 md:pt-32 pb-20 md:pb-28">
           <FadeIn className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-line text-sm font-medium text-fg-muted shadow-soft">
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface border border-line text-sm font-medium text-fg-muted shadow-soft">
               <span className="w-1.5 h-1.5 rounded-full bg-brand" />
               Bolt-on automations for live sites
             </span>
@@ -127,7 +127,7 @@ export default function AutomationsPage() {
       <section className="section bg-bg">
         <div className="container-x">
           <FadeIn className="max-w-2xl">
-            <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-white border border-line text-sm font-medium text-fg-muted">
+            <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-surface border border-line text-sm font-medium text-fg-muted">
               What&apos;s available
             </span>
             <h2 className="mt-4 text-3xl md:text-5xl font-bold text-fg tracking-tight text-balance">
@@ -193,7 +193,7 @@ export default function AutomationsPage() {
         <div className="container-x">
           <div className="max-w-4xl mx-auto">
             <FadeIn>
-              <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-white border border-line text-sm font-medium text-fg-muted">
+              <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-surface border border-line text-sm font-medium text-fg-muted">
                 Why automations
               </span>
               <h2 className="mt-4 text-3xl md:text-5xl font-bold text-fg tracking-tight text-balance">
@@ -209,7 +209,7 @@ export default function AutomationsPage() {
             <FadeInStagger className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
               {benefits.map((benefit) => (
                 <FadeInItem key={benefit}>
-                  <div className="flex items-start gap-3 bg-white rounded-2xl border border-line p-5 shadow-soft">
+                  <div className="flex items-start gap-3 bg-surface rounded-2xl border border-line p-5 shadow-soft">
                     <CheckCircle2 className="w-5 h-5 text-brand flex-shrink-0 mt-0.5" />
                     <p className="text-fg-muted leading-relaxed text-sm">
                       {benefit}
@@ -237,13 +237,13 @@ export default function AutomationsPage() {
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center h-12 px-6 rounded-xl bg-white text-fg font-semibold text-base hover:bg-bg-tint transition-colors"
+                className="inline-flex items-center justify-center h-12 px-6 rounded-xl whitespace-nowrap bg-white text-slate-900 font-semibold text-base hover:bg-indigo-50 transition-colors"
               >
                 Get in touch
               </Link>
               <Link
                 href="/how-it-works"
-                className="inline-flex items-center justify-center h-12 px-6 rounded-xl border border-line-on-dark text-fg-on-dark font-semibold text-base hover:bg-white/5 transition-colors"
+                className="inline-flex items-center justify-center h-12 px-6 rounded-xl whitespace-nowrap border border-line-on-dark text-fg-on-dark font-semibold text-base hover:bg-white/5 transition-colors"
               >
                 See the website service
               </Link>

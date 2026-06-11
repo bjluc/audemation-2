@@ -91,7 +91,7 @@ export default function HomePage() {
 
         <div className="container-x relative pt-20 md:pt-32 pb-20 md:pb-28">
           <FadeIn className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-line text-sm font-medium text-fg-muted shadow-soft">
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface border border-line text-sm font-medium text-fg-muted shadow-soft">
               <span className="w-1.5 h-1.5 rounded-full bg-brand" />
               Free mockup. No credit card. No catch.
             </span>
@@ -99,7 +99,9 @@ export default function HomePage() {
               I rebuild your tired website for free.
             </h1>
             <p className="mt-6 text-lg md:text-xl text-fg-muted max-w-2xl leading-relaxed text-pretty">
-              {"I find many UK small businesses whose websites aren't doing them any favours. I can build a modern sample at no charge if you'd like. I deliver the real thing."}
+              {/*   (non-breaking spaces) keep the sentence-starting
+                  "I" glued to its verb so it never strands at a line end */}
+              {"I find many UK small businesses whose websites aren't doing them any favours. I can build a modern sample at no charge if you'd like. I deliver the real thing."}
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-3">
               <Link href="/contact" className="btn-brand group">
@@ -168,7 +170,7 @@ export default function HomePage() {
       <section className="section bg-bg-alt">
         <div className="container-x">
           <FadeIn className="max-w-2xl">
-            <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-white border border-line text-sm font-medium text-fg-muted">
+            <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-surface border border-line text-sm font-medium text-fg-muted">
               Mockups
             </span>
             <h2 className="mt-4 text-3xl md:text-5xl font-bold text-fg tracking-tight text-balance">
@@ -219,7 +221,7 @@ export default function HomePage() {
       <section className="section bg-bg">
         <div className="container-x">
           <FadeIn className="max-w-2xl">
-            <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-white border border-line text-sm font-medium text-fg-muted">
+            <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-surface border border-line text-sm font-medium text-fg-muted">
               Automations
             </span>
             <h2 className="mt-4 text-3xl md:text-5xl font-bold text-fg tracking-tight text-balance">
@@ -278,13 +280,13 @@ export default function HomePage() {
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center h-12 px-6 rounded-xl bg-white text-fg font-semibold text-base hover:bg-bg-tint transition-colors"
+                className="inline-flex items-center justify-center h-12 px-6 rounded-xl whitespace-nowrap bg-white text-slate-900 font-semibold text-base hover:bg-indigo-50 transition-colors"
               >
                 Get your free mockup
               </Link>
               <Link
                 href="/about"
-                className="inline-flex items-center justify-center h-12 px-6 rounded-xl border border-line-on-dark text-fg-on-dark font-semibold text-base hover:bg-white/5 transition-colors"
+                className="inline-flex items-center justify-center h-12 px-6 rounded-xl whitespace-nowrap border border-line-on-dark text-fg-on-dark font-semibold text-base hover:bg-white/5 transition-colors"
               >
                 About me
               </Link>

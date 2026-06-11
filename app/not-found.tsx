@@ -6,7 +6,7 @@ export default function NotFound() {
     <section className="bg-hero-gradient min-h-[70vh] flex items-center">
       <div className="container-x py-20">
         <div className="max-w-xl">
-          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-line text-sm font-medium text-fg-muted shadow-soft">
+          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface border border-line text-sm font-medium text-fg-muted shadow-soft">
             <span className="w-1.5 h-1.5 rounded-full bg-brand" />
             404
           </span>

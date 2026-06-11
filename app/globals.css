@@ -49,47 +49,46 @@
 
   /* ============================================ */
   /* Site design tokens — vibrant modern (indigo) */
+  /* Light/dark values live in :root and .dark    */
+  /* below; this block only maps them to          */
+  /* Tailwind utility namespaces.                 */
   /* ============================================ */
 
   /* Surfaces */
-  --color-bg: #ffffff;
-  --color-bg-alt: #fafaf9;
-  --color-bg-tint: #f5f3ff;       /* very light indigo wash */
-  --color-bg-dark: #0f172a;       /* slate-900, footer */
+  --color-bg: var(--bg);
+  --color-bg-alt: var(--bg-alt);
+  --color-bg-tint: var(--bg-tint);
+  --color-surface: var(--surface);   /* raised chips/cards/inputs (white in light) */
+  --color-bg-dark: #0f172a;       /* slate-900, footer — dark in both themes */
   --color-bg-dark-alt: #1e1b4b;   /* deep indigo, gradient stop */
 
   /* Foreground (text) */
-  --color-fg: #0f172a;            /* slate-900, primary text */
-  --color-fg-muted: #64748b;      /* slate-500, secondary text */
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
   --color-fg-on-dark: #f1f5f9;    /* slate-100 */
   --color-fg-muted-on-dark: #94a3b8; /* slate-400 */
 
   /* Lines / borders */
-  --color-line: #e2e8f0;          /* slate-200 */
+  --color-line: var(--line);
   --color-line-on-dark: #1e293b;  /* slate-800 */
 
   /* Brand: vibrant indigo */
-  --color-brand: #4f46e5;         /* indigo-600, primary brand */
-  --color-brand-hover: #4338ca;   /* indigo-700 */
-  --color-brand-soft: #eef2ff;    /* indigo-50, tinted bg */
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-soft: var(--brand-soft);
   --color-brand-glow: #818cf8;    /* indigo-400, for gradients */
 
   /* Accent: warm amber */
-  --color-warm: #f59e0b;          /* amber-500 */
-  --color-warm-hover: #d97706;    /* amber-600 */
-  --color-warm-soft: #fffbeb;     /* amber-50 */
-
-  /* Gradients (used as utility classes) */
-  --gradient-hero: linear-gradient(135deg, #ffffff 0%, #eef2ff 45%, #faf5ff 100%);
-  --gradient-cta: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-  --gradient-dark: linear-gradient(180deg, #0f172a 0%, #1e1b4b 100%);
+  --color-warm: var(--warm);
+  --color-warm-hover: var(--warm-hover);
+  --color-warm-soft: var(--warm-soft);
 
   /* Shadows */
-  --shadow-soft: 0 1px 3px 0 rgb(15 23 42 / 0.06), 0 1px 2px -1px rgb(15 23 42 / 0.04);
-  --shadow-card: 0 4px 12px -2px rgb(15 23 42 / 0.08), 0 2px 4px -2px rgb(15 23 42 / 0.04);
-  --shadow-card-hover: 0 12px 28px -4px rgb(15 23 42 / 0.12), 0 4px 8px -2px rgb(15 23 42 / 0.06);
-  --shadow-cta: 0 8px 24px -4px rgb(79 70 229 / 0.35), 0 4px 8px -2px rgb(79 70 229 / 0.2);
-  --shadow-cta-hover: 0 12px 32px -4px rgb(79 70 229 / 0.45), 0 6px 12px -2px rgb(79 70 229 / 0.25);
+  --shadow-soft: var(--sh-soft);
+  --shadow-card: var(--sh-card);
+  --shadow-card-hover: var(--sh-card-hover);
+  --shadow-cta: var(--sh-cta);
+  --shadow-cta-hover: var(--sh-cta-hover);
 
   /* Motion */
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
@@ -99,10 +98,44 @@
   /* Typography */
   --font-sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
-  --font-heading: var(--font-sans);
+  --font-heading: var(--font-space-grotesk), var(--font-sans);
 }
 
 :root {
+  /* ---- Site tokens: light theme ---- */
+  --bg: #ffffff;
+  --bg-alt: #fafaf9;
+  --bg-tint: #f5f3ff;             /* very light indigo wash */
+  --surface: #ffffff;             /* raised chips/cards/inputs */
+  --fg: #0f172a;                  /* slate-900, primary text */
+  --fg-muted: #64748b;            /* slate-500, secondary text */
+  --line: #e2e8f0;                /* slate-200 */
+  --line-accent: #c7d2fe;         /* indigo-200, card hover border */
+  --brand: #4f46e5;               /* indigo-600, primary brand */
+  --brand-hover: #4338ca;         /* indigo-700 */
+  --brand-soft: #eef2ff;          /* indigo-50, tinted bg */
+  --warm: #f59e0b;                /* amber-500 */
+  --warm-hover: #d97706;          /* amber-600 */
+  --warm-soft: #fffbeb;           /* amber-50 */
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, #ffffff 0%, #eef2ff 45%, #faf5ff 100%);
+  --gradient-cta: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  --gradient-dark: linear-gradient(180deg, #0f172a 0%, #1e1b4b 100%);
+
+  /* Shadows */
+  --sh-soft: 0 1px 3px 0 rgb(15 23 42 / 0.06), 0 1px 2px -1px rgb(15 23 42 / 0.04);
+  --sh-card: 0 4px 12px -2px rgb(15 23 42 / 0.08), 0 2px 4px -2px rgb(15 23 42 / 0.04);
+  --sh-card-hover: 0 12px 28px -4px rgb(15 23 42 / 0.12), 0 4px 8px -2px rgb(15 23 42 / 0.06);
+  --sh-cta: 0 8px 24px -4px rgb(79 70 229 / 0.35), 0 4px 8px -2px rgb(79 70 229 / 0.2);
+  --sh-cta-hover: 0 12px 32px -4px rgb(79 70 229 / 0.45), 0 6px 12px -2px rgb(79 70 229 / 0.25);
+
+  /* Hero grid + text selection */
+  --hero-line: rgb(79 70 229 / 0.32);
+  --hero-line-subtle: rgb(79 70 229 / 0.20);
+  --selection-bg: #c7d2fe;
+  --selection-fg: #1e1b4b;
+
   /* shadcn base palette (overridden with brand colours) */
   --background: #ffffff;
   --foreground: #0f172a;
@@ -138,6 +171,65 @@
   --chart-5: #10b981;
 }
 
+.dark {
+  /* ---- Site tokens: dark theme ---- */
+  --bg: #0b1120;                  /* between slate-950 and slate-900 */
+  --bg-alt: #0f172a;              /* slate-900 */
+  --bg-tint: #131a36;             /* dark indigo wash */
+  --surface: #16203a;             /* raised chips/cards/inputs */
+  --fg: #f1f5f9;                  /* slate-100 */
+  --fg-muted: #94a3b8;            /* slate-400 */
+  --line: #243049;
+  --line-accent: #4338ca;         /* indigo-700, card hover border */
+  --brand: #6366f1;               /* indigo-500 — brighter on dark */
+  --brand-hover: #818cf8;         /* indigo-400 */
+  --brand-soft: rgb(99 102 241 / 0.14);
+  --warm: #f59e0b;
+  --warm-hover: #fbbf24;          /* amber-400 */
+  --warm-soft: rgb(245 158 11 / 0.12);
+
+  --gradient-hero: linear-gradient(135deg, #0b1120 0%, #131a36 45%, #190f2e 100%);
+
+  --sh-soft: 0 1px 3px 0 rgb(0 0 0 / 0.35), 0 1px 2px -1px rgb(0 0 0 / 0.3);
+  --sh-card: 0 4px 12px -2px rgb(0 0 0 / 0.45), 0 2px 4px -2px rgb(0 0 0 / 0.35);
+  --sh-card-hover: 0 12px 28px -4px rgb(0 0 0 / 0.55), 0 4px 8px -2px rgb(0 0 0 / 0.4);
+  --sh-cta: 0 8px 24px -4px rgb(99 102 241 / 0.3), 0 4px 8px -2px rgb(99 102 241 / 0.18);
+  --sh-cta-hover: 0 12px 32px -4px rgb(99 102 241 / 0.4), 0 6px 12px -2px rgb(99 102 241 / 0.22);
+
+  --hero-line: rgb(129 140 248 / 0.30);
+  --hero-line-subtle: rgb(129 140 248 / 0.18);
+  --selection-bg: #4338ca;
+  --selection-fg: #e0e7ff;
+
+  /* shadcn dark palette */
+  --background: #0b1120;
+  --foreground: #f1f5f9;
+  --card: #16203a;
+  --card-foreground: #f1f5f9;
+  --popover: #0f172a;
+  --popover-foreground: #f1f5f9;
+  --primary: #6366f1;
+  --primary-foreground: #ffffff;
+  --secondary: #1e293b;
+  --secondary-foreground: #f1f5f9;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --accent: #f59e0b;
+  --accent-foreground: #0f172a;
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: #243049;
+  --input: #243049;
+  --ring: #818cf8;
+  --sidebar: #0f172a;
+  --sidebar-foreground: #f1f5f9;
+  --sidebar-primary: #6366f1;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #1e293b;
+  --sidebar-accent-foreground: #f1f5f9;
+  --sidebar-border: #243049;
+  --sidebar-ring: #818cf8;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -157,8 +249,8 @@
     color: inherit;
   }
   ::selection {
-    background-color: #c7d2fe;
-    color: #1e1b4b;
+    background-color: var(--selection-bg);
+    color: var(--selection-fg);
   }
 }
 
@@ -167,13 +259,18 @@
   .bg-hero-gradient {
     background: var(--gradient-hero);
   }
-  /* Dark section with gradient (for footer + final CTA) */
+  /* Dark section with gradient (for footer + final CTA).
+     These stay dark in both themes; in dark mode a hairline top
+     border keeps them distinct from the (also dark) page bg. */
   .bg-dark-gradient {
     background: var(--gradient-dark);
   }
+  .dark .bg-dark-gradient {
+    border-top: 1px solid var(--line);
+  }
   /* Primary brand CTA with shadow + hover */
   .btn-brand {
-    @apply inline-flex items-center justify-center h-12 px-6 rounded-xl bg-brand text-white font-semibold text-base;
+    @apply inline-flex items-center justify-center h-12 px-6 rounded-xl bg-brand text-white font-semibold text-base whitespace-nowrap;
     box-shadow: var(--shadow-cta);
     transition: transform 200ms var(--ease-smooth), box-shadow 200ms var(--ease-smooth), background-color 200ms var(--ease-smooth);
   }
@@ -184,7 +281,7 @@
   }
   /* Secondary outline CTA */
   .btn-outline {
-    @apply inline-flex items-center justify-center h-12 px-6 rounded-xl bg-white text-fg font-semibold text-base border border-line;
+    @apply inline-flex items-center justify-center h-12 px-6 rounded-xl bg-surface text-fg font-semibold text-base border border-line whitespace-nowrap;
     transition: transform 200ms var(--ease-smooth), border-color 200ms var(--ease-smooth), background-color 200ms var(--ease-smooth);
   }
   .btn-outline:hover {
@@ -193,14 +290,14 @@
   }
   /* Card with hover lift */
   .card-lift {
-    @apply bg-white rounded-2xl border border-line p-6;
+    @apply bg-surface rounded-2xl border border-line p-6;
     box-shadow: var(--shadow-card);
     transition: transform 250ms var(--ease-out), box-shadow 250ms var(--ease-out), border-color 250ms var(--ease-out);
   }
   .card-lift:hover {
     box-shadow: var(--shadow-card-hover);
     transform: translateY(-2px);
-    border-color: #c7d2fe;
+    border-color: var(--line-accent);
   }
   /* Section wrapper for consistent vertical rhythm */
   .section {
@@ -222,7 +319,7 @@
   }
   /* SVG lines: thin indigo, drawn via stroke-dashoffset */
   .hero-grid__line {
-    stroke: rgb(79 70 229 / 0.32);
+    stroke: var(--hero-line);
     stroke-width: 0.12;
     stroke-linecap: square;
     stroke-dasharray: 220;
@@ -241,7 +338,7 @@
      a marketing animation. Lower opacity so it sits behind page
      content without competing for attention. */
   .hero-grid--subtle .hero-grid__line {
-    stroke: rgb(79 70 229 / 0.20);
+    stroke: var(--hero-line-subtle);
     opacity: 0.35;
   }
   .hero-grid--subtle .hero-grid__line--v {
@@ -259,8 +356,8 @@
       ellipse 95% 85% at 50% 45%,
       transparent 0%,
       transparent 65%,
-      rgb(255 255 255 / 0.45) 95%,
-      rgb(255 255 255 / 0.7) 100%
+      color-mix(in srgb, var(--bg) 45%, transparent) 95%,
+      color-mix(in srgb, var(--bg) 70%, transparent) 100%
     );
     pointer-events: none;
   }
@@ -271,8 +368,8 @@
       ellipse 95% 80% at 50% 45%,
       transparent 0%,
       transparent 55%,
-      rgb(255 255 255 / 0.55) 92%,
-      rgb(255 255 255 / 0.8) 100%
+      color-mix(in srgb, var(--bg) 55%, transparent) 92%,
+      color-mix(in srgb, var(--bg) 80%, transparent) 100%
     );
   }
 }
