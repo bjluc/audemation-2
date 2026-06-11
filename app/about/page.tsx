@@ -74,7 +74,7 @@ export default function AboutPage() {
               London-based · solo · plain English
             </span>
             <h1 className="mt-6 text-4xl md:text-6xl lg:text-7xl font-bold text-fg leading-[1.05] tracking-tight text-balance">
-              I&apos;ve run businesses. I&apos;ve shipped code. Now I do both at once.
+              An engineer who knows small business from the inside.
             </h1>
             <p className="mt-6 text-lg md:text-xl text-fg-muted max-w-2xl leading-relaxed text-pretty">
               Twenty years in hospitality and serviced accommodation taught me what small

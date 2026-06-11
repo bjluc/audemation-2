@@ -215,7 +215,7 @@ export default function MockupsPage() {
                     </p>
 
                     {(card.liveUrl || card.secondaryUrl) && (
-                      <div className="mt-5 flex flex-col sm:flex-row gap-3">
+                      <div className="mt-5 flex flex-col sm:flex-row sm:flex-wrap gap-3">
                         {card.liveUrl && (
                           <Link
                             href={card.liveUrl}

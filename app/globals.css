@@ -252,9 +252,31 @@
     background-color: var(--selection-bg);
     color: var(--selection-fg);
   }
+  /* Visible keyboard focus on all interactive elements */
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
 }
 
 @layer components {
+  /* Keyboard-only "skip to content" link — visually hidden until focused */
+  .skip-link {
+    position: absolute;
+    top: -100px;
+    left: 1rem;
+    z-index: 100;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background: var(--brand);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+  .skip-link:focus-visible {
+    top: 1rem;
+  }
+
   /* Hero gradient background */
   .bg-hero-gradient {
     background: var(--gradient-hero);

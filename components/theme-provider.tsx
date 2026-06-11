@@ -1,6 +1,7 @@
 "use client";
 
 import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { MotionConfig } from "framer-motion";
 
 /**
  * Theme provider — wraps next-themes with the site's settings.
@@ -21,7 +22,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       enableSystem
       disableTransitionOnChange
     >
-      {children}
+      {/* reducedMotion="user": framer-motion animations (FadeIn etc.)
+          respect the OS prefers-reduced-motion setting */}
+      <MotionConfig reducedMotion="user">{children}</MotionConfig>
     </NextThemesProvider>
   );
 }

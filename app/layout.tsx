@@ -26,6 +26,11 @@ export const metadata: Metadata = {
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
   },
+  // "./" resolves against metadataBase per route — every page gets its
+  // own canonical URL without repeating this in each page's metadata
+  alternates: {
+    canonical: "./",
+  },
   openGraph: {
     type: "website",
     locale: "en_GB",
@@ -41,6 +46,22 @@ export const metadata: Metadata = {
     description:
       "I find UK small businesses with tired websites, build them a free modern sample, and if they want it I deliver the real thing plus the automations that make it pay for itself.",
   },
+};
+
+// Structured data for search engines — service business, London-based
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "audemation",
+  url: "https://audemation.com",
+  description:
+    "Free website mockups for UK small businesses, with full builds and automations when you're ready.",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "London",
+    addressCountry: "GB",
+  },
+  areaServed: "GB",
 };
 
 export default function RootLayout({
@@ -61,9 +82,16 @@ export default function RootLayout({
           cz-shortcut-listen) inject attributes on <body> before React
           hydrates; only attribute diffs on this element are suppressed */}
       <body className="antialiased" suppressHydrationWarning>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <ThemeProvider>
+          <a href="#main" className="skip-link">
+            Skip to content
+          </a>
           <Header />
-          {children}
+          <main id="main">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
