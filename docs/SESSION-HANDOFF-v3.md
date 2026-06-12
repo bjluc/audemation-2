@@ -98,6 +98,32 @@ That's exactly step 10.
 ## Token-budget note for the next session
 This session ran on the MiniMax Token Plan Monthly Plus (1M context, ~40% cap ≈ 400K). Started at 54% used per Bernard's note, finished step 9 with the system live. Step 10 (real prospect) was deferred to a fresh session so the budget headroom is comfortable for the build + deploy + iterate cycle.
 
+## Top-of-funnel plan (also deferred to next session, by Bernard's request)
+
+Bernard identified that the mockup-on-VPS pipeline (steps 1-9) is the conversion arm, but it needs qualified leads to convert. So before step 10, we need a **prospect research system** — the discovery arm.
+
+**Status:** plan written, awaiting data source + API key from Bernard.
+
+**Where:** `audemation-2/docs/PLAN-prospect-research.md` (committed `a6d29f8`, 317 lines).
+
+**Decisions made in this session:**
+- Data source: **Google Places API** (Bernard picked option 1)
+
+**Decisions still open:**
+- v1 test niche + area (was deferring; can pick during build)
+- Brand-new Google Sheet vs augmenting an existing one (recommend brand-new)
+- Bernard needs to: create a Google Cloud project, enable Places API, generate an API key, hand the key to the agent
+
+**What the next session does, in order:**
+1. Read `PLAN-prospect-research.md` and this handoff doc
+2. If Bernard has the Places API key in hand, proceed to build (steps 2-5 of the plan)
+3. If not, surface that as the blocker and help Bernard set up the Google Cloud project (15-20 min, well-documented)
+4. Build the script + skill + MEMORY update
+5. Run the v1 test (niche + area of Bernard's choice)
+6. Pick a top candidate from the new sheet and run the full mockup-on-VPS pipeline (step 10 of `PLAN-mockup-system.md`)
+
+When both v1 systems are shipped (one real prospect end-to-end), the audemation sales motion is fully live: **scrape → review sheet → pick → deploy mockup → prospect opens URL → say yes → fork profile → full build**.
+
 ## Files added/touched in this session
 - `audemation-2/scripts/deploy-mockup.py` — NEW (committed `6f08f8b`)
 - `audemation-2/docs/PLAN-mockup-system.md` — read only (no edits)
