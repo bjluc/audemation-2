@@ -6,11 +6,11 @@ import { FadeIn, FadeInStagger, FadeInItem } from "@/components/motion/fade-in";
 import { HeroGrid } from "@/components/hero/hero-grid";
 
 export const metadata: Metadata = {
-  title: "About · audemation",
+  title: "About",
   description:
     "Twenty years running real businesses. Three production systems shipped. London-based, solo, plain English. No agency overhead.",
   openGraph: pageOpenGraph({
-    title: "About · audemation",
+    title: "About — audemation",
     description:
       "Twenty years running real businesses. Three production systems shipped. London-based, solo, plain English. No agency overhead.",
     path: "/about",

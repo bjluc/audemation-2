@@ -1,6 +1,9 @@
 import type { MetadataRoute } from "next"
+import { SITE_URL } from "@/lib/site"
 
-const baseUrl = "https://audemation.com"
+// Canonical host: the apex 308-redirects here, so listing apex URLs
+// in the sitemap pointed crawlers at eight redirects.
+const baseUrl = SITE_URL
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SITE_URL } from "./site";
 
 /**
  * Per-page Open Graph blocks.
@@ -12,7 +13,7 @@ import type { Metadata } from "next";
  * `alternates.canonical`, a relative `openGraph.url` is dropped rather
  * than resolved against metadataBase, emitting no og:url tag at all.
  */
-export const SITE_URL = "https://www.audemation.com";
+// SITE_URL lives in lib/site.ts so sitemap/robots can share it.
 
 const SHARED = {
   type: "website",

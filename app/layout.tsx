@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import { SITE_URL } from "@/lib/site";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   // Canonical host is www: audemation.com 308-redirects to www.audemation.com,
   // so metadata must agree with the redirect or every canonical URL points
   // at a host that immediately bounces.
-  metadataBase: new URL("https://www.audemation.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "audemation — Free website mockups for UK small businesses",
     template: "%s — audemation",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: "https://www.audemation.com",
+    url: SITE_URL,
     siteName: "audemation",
     title: "audemation — Free website mockups for UK small businesses",
     description:
@@ -66,7 +67,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "audemation",
-  url: "https://www.audemation.com",
+  url: SITE_URL,
   description:
     "Free website mockups for UK small businesses, with full builds and automations when you're ready.",
   address: {
