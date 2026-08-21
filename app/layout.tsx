@@ -16,7 +16,10 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://audemation.com"),
+  // Canonical host is www: audemation.com 308-redirects to www.audemation.com,
+  // so metadata must agree with the redirect or every canonical URL points
+  // at a host that immediately bounces.
+  metadataBase: new URL("https://www.audemation.com"),
   title: {
     default: "audemation — Free website mockups for UK small businesses",
     template: "%s — audemation",
@@ -34,11 +37,21 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: "https://audemation.com",
+    url: "https://www.audemation.com",
     siteName: "audemation",
     title: "audemation — Free website mockups for UK small businesses",
     description:
       "I find UK small businesses with tired websites, build them a free modern sample, and if they want it I deliver the real thing plus the automations that make it pay for itself.",
+    // Resolves against metadataBase. Without this LinkedIn renders shares as
+    // a thin text strip instead of a large card.
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "audemation — free website mockups for UK small businesses",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -53,7 +66,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "audemation",
-  url: "https://audemation.com",
+  url: "https://www.audemation.com",
   description:
     "Free website mockups for UK small businesses, with full builds and automations when you're ready.",
   address: {
