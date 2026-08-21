@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Generated banner renders — uploaded to LinkedIn by hand, not part of the site
+scripts/out/

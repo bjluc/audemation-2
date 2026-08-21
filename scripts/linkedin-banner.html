@@ -1,0 +1,128 @@
+<!doctype html>
+<!--
+  LinkedIn company page banner — audemation
+  Render target: 1128 × 191 PNG  →  public/linkedin-banner.png
+
+  Not part of the Next.js build. Source file for generating a static
+  image; see the render command in scripts/README.md.
+
+  Design notes
+  ------------
+  • Tokens lifted verbatim from app/globals.css :root — brand #4f46e5,
+    fg #0f172a, fg-muted #64748b, warm #f59e0b.
+  • Deliberately NO wordmark. On a company page the logo avatar sits
+    immediately below-left of the banner and already reads "audemation";
+    repeating it would say the name twice in one glance.
+  • Text block sits at x=420, right of centre. The logo avatar overlaps
+    the banner's bottom-left on desktop, and LinkedIn crops banners
+    inward on mobile — this position clears the logo and survives crop.
+  • Grid echoes .hero-grid from the site, held static and faint so it
+    reads as texture rather than decoration at banner scale.
+-->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --fg:        #0f172a;
+    --fg-muted:  #64748b;
+    --brand:     #4f46e5;
+    --warm:      #f59e0b;
+    --grid-line: rgba(79, 70, 229, 0.14);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body { width: 1128px; height: 191px; }
+
+  body {
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right,  var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  /* Fades the grid toward the edges so it neither collides with the
+     logo avatar nor terminates abruptly at the mobile crop line. */
+  .vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse 70% 120% at 54% 50%,
+      transparent 0%,
+      transparent 45%,
+      rgba(255, 255, 255, 0.85) 88%,
+      #ffffff 100%
+    );
+  }
+
+  .block {
+    position: absolute;
+    left: 420px;
+    top: 40px;
+  }
+
+  .rule {
+    width: 44px;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--brand);
+    margin-bottom: 14px;
+  }
+
+  h1 {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.18;
+    letter-spacing: -0.9px;
+    color: var(--fg);
+  }
+
+  .domain {
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    color: var(--fg-muted);
+  }
+
+  /* Single amber tick, matching the logo's inner dot — the only warm
+     pixel on the banner. Enough to tie it to the mark without turning
+     the strip into a palette demo. */
+  .domain::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--warm);
+    margin-right: 8px;
+    vertical-align: 2px;
+  }
+</style>
+</head>
+<body>
+  <div class="grid"></div>
+  <div class="vignette"></div>
+
+  <div class="block">
+    <div class="rule"></div>
+    <h1>Free website mockups<br>for UK small businesses</h1>
+    <div class="domain">audemation.com</div>
+  </div>
+</body>
+</html>
