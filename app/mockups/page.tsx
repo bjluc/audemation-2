@@ -7,11 +7,11 @@ import { FadeIn, FadeInStagger, FadeInItem } from "@/components/motion/fade-in";
 export const metadata: Metadata = {
   title: "Mockups",
   description:
-    "A selection of real sites I've built for clients. Featured entry: the previous audemation.com.",
+    "A selection of real sites I've built for clients — the finished work, not theme demos or stock templates. Featured entry: the previous audemation.com.",
   openGraph: pageOpenGraph({
     title: "Mockups — audemation",
     description:
-      "A selection of real sites I've built for clients. Featured entry: the previous audemation.com.",
+      "A selection of real sites I've built for clients — the finished work, not theme demos or stock templates. Featured entry: the previous audemation.com.",
     path: "/mockups",
   }),
 };
