@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/og";
 import Link from "next/link";
 import {
   MessageSquare,
@@ -16,6 +17,12 @@ export const metadata: Metadata = {
   title: "Automations",
   description:
     "Once your site is live, here's what we can bolt on: AI enquiry handling, CRM pipelines, booking capture, review requests, and quote follow-ups.",
+  openGraph: pageOpenGraph({
+    title: "Automations — audemation",
+    description:
+      "Once your site is live, here's what we can bolt on: AI enquiry handling, CRM pipelines, booking capture, review requests, and quote follow-ups.",
+    path: "/automations",
+  }),
 };
 
 const automations = [

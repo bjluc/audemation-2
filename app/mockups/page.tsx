@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/og";
 import Link from "next/link";
 import { ExternalLink, ChevronDown } from "lucide-react";
 import { FadeIn, FadeInStagger, FadeInItem } from "@/components/motion/fade-in";
@@ -7,6 +8,12 @@ export const metadata: Metadata = {
   title: "Mockups",
   description:
     "A selection of real sites I've built for clients. Featured entry: the previous audemation.com.",
+  openGraph: pageOpenGraph({
+    title: "Mockups — audemation",
+    description:
+      "A selection of real sites I've built for clients. Featured entry: the previous audemation.com.",
+    path: "/mockups",
+  }),
 };
 
 interface GalleryCard {

@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/og";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Terms of service",
   description:
     "Plain-English terms covering the free mockup, paid website work, and monthly automations.",
+  openGraph: pageOpenGraph({
+    title: "Terms of service — audemation",
+    description:
+      "Plain-English terms covering the free mockup, paid website work, and monthly automations.",
+    path: "/legal/terms",
+  }),
 };
 
 /* Shared building blocks for legal prose. Kept local: the only other

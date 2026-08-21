@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/og";
 import Link from "next/link";
 import {
   Search,
@@ -18,6 +19,12 @@ export const metadata: Metadata = {
   title: "How it works",
   description:
     "The full six-step system: from spotting a tired site to delivering the real thing. Plain English, no agency overhead.",
+  openGraph: pageOpenGraph({
+    title: "How it works — audemation",
+    description:
+      "The full six-step system: from spotting a tired site to delivering the real thing. Plain English, no agency overhead.",
+    path: "/how-it-works",
+  }),
 };
 
 const steps = [

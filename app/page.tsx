@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/og";
 import Link from "next/link";
 import {
   Search,
@@ -17,6 +18,12 @@ export const metadata: Metadata = {
   title: "audemation — Free website mockups for UK small businesses",
   description:
     "I find UK small businesses whose websites are doing them no favours, build a modern sample at no charge, and if you want it — I deliver the real thing.",
+  openGraph: pageOpenGraph({
+    title: "audemation — Free website mockups for UK small businesses",
+    description:
+      "I find UK small businesses whose websites are doing them no favours, build a modern sample at no charge, and if you want it — I deliver the real thing.",
+    path: "",
+  }),
 };
 
 const steps = [

@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/og";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Privacy policy",
   description:
     "How audemation handles your data. Short, plain English, no dark patterns.",
+  openGraph: pageOpenGraph({
+    title: "Privacy policy — audemation",
+    description:
+      "How audemation handles your data. Short, plain English, no dark patterns.",
+    path: "/legal/privacy",
+  }),
 };
 
 /* Shared building blocks for legal prose. Kept local: see the note in
